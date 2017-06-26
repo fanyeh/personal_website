@@ -1,0 +1,18 @@
+$gamePad: 510px;
+$blockSize: 450px;
+$border: $gamePad - $blockSize;
+$blockOffSetTop: ($blockSize - $border)/-2;
+$blockOffSetBot: ($blockSize + $border)/2;
+$borderColor:#282828;
+
+@mixin componentSize($position, $width, $height) {
+  position: $position;
+  width: $width;
+  height: $height;
+}
+
+@mixin componentPos($top, $left, $right) {
+  top: $top;
+  left: $left;
+  right: $right;
+}
