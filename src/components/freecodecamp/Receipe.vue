@@ -1,8 +1,7 @@
 <template>
-  <div id="app" class="jumbotron">
-  
-    <div class="receipe" v-for="(receipe ,index) in receipeBook" :key="index" id="receipes">
-      <h1 class="title" @click="showIngredients(index)">{{receipe.title}}</h1>
+  <div id="app" class="jumbotron receipe">
+    <div v-for="(receipe ,index) in receipeBook" :key="index">
+      <h1 class="receipe__title" @click="showIngredients(index)">{{receipe.title}}</h1>
       <div v-if="receipe.showIngredients">
         <h4>Ingredients</h4>
         <ul class="list-group">
@@ -13,12 +12,10 @@
         <button class="btn btn-info" @click="showEdit(index)">Edit</button>
       </div>
     </div>
-  
     <br>
-    <button class="btn btn-primary" id="add" @click="addReceipe">Add new receipe</button>
-  
+    <button class="btn btn-primary" @click="addReceipe">Add new receipe</button>
     <div class="_modal" v-if="add">
-      <div id="addReceipe" class="jumbotron">
+      <div class="receipe--new jumbotron">
         <div class="form-group">
           <label>Receipe</label>
           <input type="text" class="form-control" v-model="newReceipe"></input>
@@ -31,19 +28,16 @@
         <button class="btn btn-default" @click="closeAdd">Close</button>
       </div>
     </div>
-  
     <div class="_modal" v-if="edit">
-      <div id="editReceipe" class="jumbotron">
+      <div class="receipe--edit jumbotron">
         <div class="form-group">
           <label>Receipe</label>
           <input type="text" class="form-control" v-model="receipe.title"></input>
         </div>
-  
         <div class="form-group">
           <label>Ingredients</label>
           <input type="text" class="form-control" v-model="editIngredients"></input>
         </div>
-  
         <button class="btn btn-success" @click="updateReceipe">Update</button>
         <button class="btn btn-default" @click="closeReceipe">Close</button>
       </div>
@@ -132,25 +126,35 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.title:hover {
+.receipe {
+  text-align: left;
+}
+
+.receipe__title:hover {
   text-decoration: underline;
 }
 
-#editReceipe,
-#addReceipe {
+.receipe--edit,
+.receipe--new {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 50vw;
+  width: 50%;
   transform: translate(-50%, -50%);
 }
 
 ._modal {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width:576px) {
+  .receipe {
+    transform: scale(0.95);
+  }
 }
 </style>

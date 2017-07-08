@@ -1,35 +1,36 @@
 <template>
-  <div id='clock'>
-    <div class="set">
-      <div class='setting break'>
-        <p>Break Length</p>
+  <div class="clock">
+    <!-- Setting -->
+    <div class="row">
+      <div class="col-sm-6 clock__setting clock__setting--break">
+        <p class="clock__setting-type">Break Length</p>
         <i class="fa fa-minus" aria-hidden="true" @click="reduceBreakMinute"></i>
-        <span class='time'>{{breakTime}}</span>
+        <span class='clock__setting-time'>{{breakTime}}</span>
         <i class="fa fa-plus" aria-hidden="true" @click="increaseBreakMinute"></i>
       </div>
-      <div class='setting work'>
-        <p>Session Length</p>
+      <div class="col-sm-6 clock__setting clock__setting--work">
+        <p class="clock__setting-type">Session Length</p>
         <i class="fa fa-minus" aria-hidden="true" @click="reduceWorkMinute"></i>
-        <span class='time'>{{workTime}}</span>
+        <span class='clock__setting-time'>{{workTime}}</span>
         <i class="fa fa-plus" aria-hidden="true" @click="increaseWorkMinute"></i>
       </div>
     </div>
-  
-    <div id="time-box" :class="workMode ? '' : 'break'">
-      <div id="border">
-        <div ref="funnel" id="funnel" :class="funnelAnimation"></div>
+    <!--Counter -->
+    <div class="clock__counter" :class="workMode ? '' : 'break'">
+      <div class="clock__counter--border">
+        <div ref="funnel" class="clock__counter--funnel" :class="funnelAnimation"></div>
       </div>
-      <div id="counter" v-on:click="startWorkTimer">{{formatedMinute}}:{{formatedSecond}}</div>
+      <div class="clock__counter--count" v-on:click="startWorkTimer">{{formatedMinute}}:{{formatedSecond}}</div>
     </div>
-    <div id='reset' @click="loadDefault">Reset</div>
+  
+    <div class='clock__reset-btn' @click="loadDefault">Reset</div>
+  
   </div>
 </template>
 
 <script>
 
 /* If required */
-/* import otherComponent from './components/OtherComponent' */
-
 export default {
   name: 'clock',
   data() {
@@ -100,7 +101,7 @@ export default {
       }
     },
     reduceWorkMinute() {
-      if (this.workTime > 2) {
+      if (this.workTime > 1) {
         this.workTime -= 1
         if (this.workMode) {
           this.reset(true, this.workTime)
@@ -114,7 +115,7 @@ export default {
       }
     },
     reduceBreakMinute() {
-      if (this.breakTime > 2) {
+      if (this.breakTime > 1) {
         this.breakTime -= 1
         if (!this.workMode) {
           this.reset(false, this.breakTime)
@@ -151,123 +152,106 @@ $airbnb-color: #fd5c63;
   transform: scale(0.85);
 }
 
-div {
-  color: $vue-color; // background-color: #303030;
-  text-align: center;
-}
-
-#clock {
-  width: 100%;
+.clock {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: auto;
+  width: 70%;
 }
 
-span {
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.button {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  border-radius: 50%;
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.button:active {
-  @include click-animation();
-}
-
-.button.work {
-  border: 1px solid $vue-color;
-  color: $vue-color;
-  margin-top: 10px;
-}
-
-.button.work:hover {
-  background-color: $vue-color;
-  color: white;
-}
-
-.button.break {
-  border: 1px solid $airbnb-color;
-  color: $airbnb-color;
-  margin-top: 10px;
-}
-
-.button.break:hover {
-  background-color: $airbnb-color;
-  color: white;
-}
-
-div.setting {
-  display: inline-block;
+// Setting
+.clock__setting {
   padding: 20px;
-  p {
+  .clock__setting-type {
     font-size: 20px;
     font-weight: 500;
   }
+  .clock__setting-time {
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 10px;
+  }
+  .fa-plus,
+  .fa-minus {
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 50%;
+  }
+  .fa-plus:hover,
+  .fa-minus:hover {
+    color: white;
+  }
+
+  .fa-plus:active,
+  .fa-minus:active {
+    @include click-animation();
+  }
 }
 
-.break {
+.clock__setting--break {
   color: $airbnb-color;
+  .fa-plus:hover,
+  .fa-minus:hover {
+    background-color: $airbnb-color;
+  }
 }
 
-.work {
+.clock__setting--work {
   color: $vue-color;
+  .fa-plus:hover,
+  .fa-minus:hover {
+    background-color: $vue-color;
+  }
 }
 
-#reset {
-  margin: 20px auto;
-  border: 2px solid;
-  width: 60px;
-  clear: both;
-  border-radius: 10px;
-  font-weight: 500;
-  border-color: $vue-color;
-  color: $vue-color;
-  text-align: center;
+// IPhone 5
+@media (max-width: 320px) {
+  .clock__setting {
+    .clock__setting-type,
+    .clock__setting-time {
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+  }
 }
 
-#reset:hover {
-  background-color: $vue-color;
-  color: white;
-}
-
-#reset:active {
-  @include click-animation();
-}
-
-.time {
-  padding: 0 10px 0 10px;
-}
-
-#time-box {
+// Counter
+.clock__counter {
   width: 200px;
   height: 200px;
   margin: 40px auto;
   position: relative;
   border-radius: 50%;
   border: 4px solid $vue-color;
+  background-color: $vue-color;
   overflow: hidden;
+  .clock__counter--border {
+    position: absolute;
+    width: 192px;
+    height: 192px;
+    background-color: #303030;
+    clip-path: circle(50% at 50% 50%);
+  }
 
-  #counter {
-    color: #303030; // margin: auto 0;
+  .clock__counter--funnel {
+    position: absolute;
+    width: 192px;
+    height: 192px;
+    top: 192px;
+  }
+
+  .clock__counter--count {
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
     font-size: 50px;
-    font-weight: 900;
-  }
-
-  #funnel {
-    position: absolute;
-    width: 190px;
-    height: 190px;
-    top: 190px;
+    font-weight: 600;
   }
 
   @mixin funnel-animation($name, $color) {
@@ -304,67 +288,27 @@ div.setting {
       transform: translateY(-100%);
     }
   }
-
-  #border {
-    position: absolute;
-    width: 190px;
-    height: 190px;
-    background-color: transparent;
-    top: 5px;
-    left: 5px;
-    clip-path: circle(50% at 50% 50%);
-  }
 }
 
-#time-box.break {
-  border: 4px solid $airbnb-color;
+// Reset
+.clock__reset-btn {
+  margin: 20px auto;
+  border: 2px solid;
+  width: 60px;
+  clear: both;
+  border-radius: 10px;
+  font-weight: 500;
+  border-color: $vue-color;
+  color: $vue-color;
+  text-align: center;
 }
 
-.break {
-  .fa-plus {
-    border: 2px solid;
-    padding: 8px;
-    border-radius: 50%;
-  }
-
-  .fa-plus:hover {
-    background-color: $airbnb-color;
-    color: white;
-  }
-
-  .fa-minus {
-    border: 2px solid;
-    padding: 8px;
-    border-radius: 50%;
-  }
-
-  .fa-minus:hover {
-    background-color: $airbnb-color;
-    color: white;
-  }
+.clock__reset-btn:hover {
+  background-color: $vue-color;
+  color: white;
 }
 
-.work {
-  .fa-plus {
-    border: 2px solid;
-    padding: 8px;
-    border-radius: 50%;
-  }
-
-  .fa-plus:hover {
-    background-color: $vue-color;
-    color: white;
-  }
-
-  .fa-minus {
-    border: 2px solid;
-    padding: 8px;
-    border-radius: 50%;
-  }
-
-  .fa-minus:hover {
-    background-color: $vue-color;
-    color: white;
-  }
+.clock__reset-btn:active {
+  @include click-animation();
 }
 </style>

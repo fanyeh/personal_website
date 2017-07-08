@@ -31,7 +31,7 @@
       </tbody>
     </table>
   
-    <div class="page-btn">
+    <div class="page-btns">
       <button v-for="n in pageIndexes()" class="btn btn-sm" @click="fetchTableData(n)" :class="buttonControl[n] ? 'selected' : ''">{{n}}</button>
     </div>
   </div>
@@ -76,6 +76,11 @@ export default {
       this.buttonControl[this.selectedButton] = false
       this.buttonControl[index] = true
       this.selectedButton = index
+    }
+  },
+  created() {
+    if (window.innerWidth < 414) {
+      this.dataPerPage = 10
     }
   },
   mounted() {
@@ -126,20 +131,35 @@ thead>tr>th {
   display: none;
 }
 
-.page-btn {
+.page-btns {
   text-align: right;
   width: 100%;
   margin: 20px auto;
-  button {
+  .btn {
     margin: 0 1px;
     width: 32px;
     background-color: #42b883;
     color: white;
   }
+
+  .btn.selected {
+    color: black;
+    text-decoration: underline;
+  }
 }
 
-button.selected {
-  color: black;
-  text-decoration: underline;
+@media (max-width:576px) {
+  .page-btns {
+    text-align: center;
+    width: 100%;
+    margin: 5px auto;
+    .btn {
+      margin: 0 1px;
+      width: 26px;
+      background-color: #42b883;
+      color: white;
+      font-size: 13px;
+    }
+  }
 }
 </style>

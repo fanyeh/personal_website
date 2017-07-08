@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p ref="extract" :class="showContinue ? 'continue' : ''">{{extract}}</p>
+    <p class="page" ref="extract" :class="showContinue ? 'page--continue' : ''">{{extract}}</p>
   </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
 <style scoped lang='scss'>
 $lineHeight: 1.5em;
 $height: 1.5em * 8;
-p {
+.page {
   position: relative;
   margin: 15px 15px;
   text-align: justify;
@@ -40,11 +40,11 @@ p {
   overflow: hidden;
 }
 
-p.continue:after {
+.page--continue:after {
   content: "...";
   position: absolute;
   font-weight: bold;
-  bottom: 0;
+  bottom: 3px;
   right: 0;
   padding: 0 9px;
   background-color: white;

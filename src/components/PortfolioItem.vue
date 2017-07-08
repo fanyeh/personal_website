@@ -1,17 +1,21 @@
 <template>
   <section>
     <div class="container">
-      <div class="item header">
-        <i class="fa fa-times-circle fa-2x" aria-hidden="true" @click="closeSlider"></i>
+      <div class="close-btn">
+        <i class="fa fa-times-circle fa-2x" aria-hidden="true" @click="closeSlider" cp></i>
       </div>
-      <div class="item prev" @click="prevContent">
-        <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-      </div>
-      <div class="item project">
-        <div :is="currentProject"></div>
-      </div>
-      <div class="item next" @click="nextContent">
-        <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+      <div class="row slide">
+        <div class="hidden-sm-down col-md-1">
+          <i class="fa fa-chevron-left fa-2x slide-ctrl__btn" aria-hidden="true" @click="prevContent"></i>
+        </div>
+        <div class="col-md-10">
+          <div class="slide-content">
+            <component :is="$route.params.projectName"></component>
+          </div>
+        </div>
+        <div class="hidden-sm-down col-md-1">
+          <i class="fa fa-chevron-right fa-2x slide-ctrl__btn" aria-hidden="true" @click="nextContent"></i>
+        </div>
       </div>
     </div>
   </section>
@@ -20,26 +24,25 @@
 <script>
 
 /* If required */
-import Quote from '../components/freecodecamp/Quote'
-import Clock from '../components/freecodecamp/Clock'
-import Weather from '../components/freecodecamp/Weather'
-import Wiki from '../components/freecodecamp/Wiki/Wiki'
-import Twitch from '../components/freecodecamp/Twitch'
-import Calculator from '../components/freecodecamp/Calculator/Calculator'
-import TicTacToe from '../components/freecodecamp/TicTacToe'
-import Simmon from '../components/freecodecamp/Simmon/Simmon'
-import Markdown from '../components/freecodecamp/Markdown'
-import Leaderboard from '../components/freecodecamp/Leaderboard'
-import Receipe from '../components/freecodecamp/Receipe'
-import GameOfLife from '../components/freecodecamp/GameOfLife'
+import Quote from 'freecodecamp/Quote'
+import Clock from 'freecodecamp/Clock'
+import Weather from 'freecodecamp/Weather'
+import Wiki from 'freecodecamp/Wiki/Wiki'
+import Twitch from 'freecodecamp/Twitch'
+import Calculator from 'freecodecamp/Calculator'
+import TicTacToe from 'freecodecamp/TicTacToe'
+import Simmon from 'freecodecamp/Simmon/Simmon'
+import Markdown from 'freecodecamp/Markdown'
+import Leaderboard from 'freecodecamp/Leaderboard'
+import Receipe from 'freecodecamp/Receipe'
+import GameOfLife from 'freecodecamp/GameOfLife'
 
 export default {
   name: 'portfolio-item',
+  props: ['projectName'],
   data() {
     return {
-      name: '',
       contentIndex: 0,
-      currentProject: '',
       projects: ['quote', 'weather', 'wiki', 'twitch', 'calculator', 'clock', 'ticTacToe', 'simmon', 'markdown', 'leaderboard', 'receipe', 'gameOfLife']
     }
   },
@@ -57,12 +60,6 @@ export default {
     receipe: Receipe,
     gameOfLife: GameOfLife
   },
-  watch: {
-    name: function (val, newVal) {
-      this.contentIndex = this.projects.indexOf(val)
-      this.fetchContent()
-    }
-  },
   methods: {
     nextContent() {
       this.contentIndex = this.contentIndex === this.projects.length - 1 ? 0 : this.contentIndex + 1
@@ -73,15 +70,15 @@ export default {
       this.fetchContent()
     },
     fetchContent() {
-      this.currentProject = this.projects[this.contentIndex]
+      this.$router.push({ name: 'portfolio', params: { projectName: this.projects[this.contentIndex] } })
     },
     closeSlider() {
-      this.$store.commit('toggle')
+      document.body.style.overflow = 'auto'
+      this.$router.push({ name: 'home' })
     }
   },
   mounted() {
-    this.contentIndex = this.projects.indexOf(this.$store.state.selectedProject)
-    this.fetchContent()
+    document.body.style.overflow = 'hidden'
   }
 }
 </script>
@@ -89,47 +86,31 @@ export default {
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
 .container {
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 50px auto 50px;
-  grid-gap: 5px;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: white;
+  text-align: center;
 }
 
-.item {
-  align-self: center;
-  justify-self: center;
-}
-
-.prev {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.project {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: stretch; // align-self: stretch;
-}
-
-.next {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.header {
-  grid-column: 3/4;
-  grid-row: 1/2; // justify-self: right;
-  justify-self: stretch;
+.close-btn {
   text-align: right;
+  padding-top: 10px;
 }
 
-.fa-times-circle {
-  margin-right: 20px;
+.slide {
+  height: 90%;
+}
+
+.slide-content {
+  height: 100%;
+}
+
+.slide-ctrl__btn {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); // border: 1px solid;
 }
 </style>

@@ -13,7 +13,6 @@
       <div v-if="strictMode " id="light"></div>
     </div>
     <switch-control></switch-control>
-  
     <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" ref="b1"></audio>
     <audio src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" ref="b2"></audio>
     <audio src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" ref="b3"></audio>
@@ -215,13 +214,14 @@ label#gameLabel {
   border-radius: 15%;
   border: 3px solid $borderColor;
   background-color: $borderColor;
+  text-align: center;
 }
 
 label#score {
-  font-size: 38px;
+  font-size: 30px;
   font-family: 'Orbitron';
   color: white;
-  margin: auto;
+  margin-top: -8px;
 }
 
 @keyframes fade {

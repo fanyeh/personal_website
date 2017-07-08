@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1316px" height="89px" viewBox="0 0 1316 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>Run</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(82.512783, -1.707965)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(2.469027, 3.292035)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(27.446119, 53.721713) rotate(27.000000) translate(-27.446119, -53.721713) " points="21.4318459 41.9244206 33.4603918 47.5933927 32.9890146 65.5190057 24.6352315 63.7020692"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(14.604754, 61.711010) rotate(13.000000) translate(-14.604754, -61.711010) " x="0.663484063" y="57.4021686" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(47.278594, 69.222233) rotate(119.000000) translate(-47.278594, -69.222233) " x="31.874351" y="64.5686836" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="55.4737158" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(34.771542, 16.968217) rotate(9.000000) translate(-34.771542, -16.968217) " points="27.5666692 14.0194116 41.9764139 13.0274728 39.2568422 20.9089616 29.7276972 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(56.218079, 32.140286) rotate(70.000000) translate(-56.218079, -32.140286) " x="44.6494074" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(22.325652, 20.602061) rotate(142.000000) translate(-22.325652, -20.602061) " x="11.9979251" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="57.0227458" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <ellipse id="Hip" fill="#546E7A" cx="33.2709525" cy="44.4672466" rx="7.57303555" ry="7.58356143"></ellipse>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(41.239519, 52.782635) rotate(36.000000) translate(-41.239519, -52.782635) " points="35.952148 47.3518939 53.5318289 47.3162719 50.3884354 56.4453857 28.9472088 58.2489978"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(42.202357, 30.349404) rotate(30.000000) translate(-42.202357, -30.349404) " points="34.3902529 16.1748022 50.0435466 16.1060965 50.0435466 44.5927107 34.3611679 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-3" transform="translate(164.601770, -0.707965)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(4.938053, 2.469027)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(25.208631, 54.583482) rotate(14.000000) translate(-25.208631, -54.583482) " points="19.1943581 42.786189 31.222904 48.4551611 30.7515268 66.380774 22.3977437 64.5638376"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(14.584100, 67.268695) rotate(-12.000000) translate(-14.584100, -67.268695) " x="0.642829697" y="62.9598537" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(30.190250, 71.834493) rotate(132.000000) translate(-30.190250, -71.834493) " x="14.7860069" y="67.1809443" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="50.4823969" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(29.780223, 16.968217) rotate(9.000000) translate(-29.780223, -16.968217) " points="22.5753503 14.0194116 36.985095 13.0274728 34.2655234 20.9089616 24.7363784 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(51.226760, 32.140286) rotate(70.000000) translate(-51.226760, -32.140286) " x="39.6580885" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(17.334334, 20.602061) rotate(142.000000) translate(-17.334334, -20.602061) " x="7.0066062" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="52.0314269" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <ellipse id="Hip" fill="#546E7A" cx="29.3123203" cy="43.4331245" rx="7.57303555" ry="7.58356143"></ellipse>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(32.998048, 55.727742) rotate(72.000000) translate(-32.998048, -55.727742) " points="24.5228737 49.1273337 42.6186105 49.3774529 39.1502482 58.2317856 23.3774848 62.3281507"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(37.211038, 30.349404) rotate(30.000000) translate(-37.211038, -30.349404) " points="29.398934 16.1748022 45.0522278 16.1060965 45.0522278 44.5927107 29.369849 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-3" transform="translate(821.362832, 0.115044)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(4.938053, 0.823009)">
+                <polygon id="RightThigh" fill="#2C4C5C" transform="translate(33.342277, 55.727742) rotate(72.000000) translate(-33.342277, -55.727742) " points="24.8671026 49.1273337 42.9628394 49.3774529 39.4944771 58.2317856 23.7217137 62.3281507"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(14.584100, 67.096342) rotate(-12.000000) translate(-14.584100, -67.096342) " x="0.642829697" y="62.7875" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(27.135369, 55.166283) rotate(14.000000) translate(-27.135369, -55.166283) " points="19.269579 43.8602936 35.0011592 43.9043367 30.7656522 66.4722721 22.9596466 62.5211939"></polygon>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(30.534479, 71.834493) rotate(132.000000) translate(-30.534479, -71.834493) " x="15.1302358" y="67.1809443" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="50.8266258" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(30.124452, 16.968217) rotate(9.000000) translate(-30.124452, -16.968217) " points="22.9195792 14.0194116 37.3293239 13.0274728 34.6097522 20.9089616 25.0806073 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(51.570989, 32.140286) rotate(70.000000) translate(-51.570989, -32.140286) " x="40.0023174" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(17.678562, 20.602061) rotate(142.000000) translate(-17.678562, -20.602061) " x="7.35083508" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="52.3756558" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <ellipse id="Hip" fill="#546E7A" cx="29.6565492" cy="43.4331245" rx="7.57303555" ry="7.58356143"></ellipse>
+                <polygon id="Body" fill="#00ACC1" transform="translate(37.555267, 30.349404) rotate(30.000000) translate(-37.555267, -30.349404) " points="29.7431629 16.1748022 45.3964566 16.1060965 45.3964566 44.5927107 29.7140779 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-2" transform="translate(0.272259, -0.310233)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(0.823009, 1.646018)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(28.029938, 54.170509) rotate(41.000000) translate(-28.029938, -54.170509) " points="22.0141215 44.5129788 34.045755 46.8868145 33.5712902 63.8280385 25.2175071 62.3406533"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(14.016831, 58.086731) rotate(34.000000) translate(-14.016831, -58.086731) " x="0.0755608038" y="53.777889" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(56.915680, 71.764266) rotate(53.000000) translate(-56.915680, -71.764266) " x="41.5114375" y="67.1107165" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="58.9160047" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(38.213830, 16.968217) rotate(9.000000) translate(-38.213830, -16.968217) " points="31.0089581 14.0194116 45.4187028 13.0274728 42.6991311 20.9089616 33.1699861 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(59.660368, 32.140286) rotate(70.000000) translate(-59.660368, -32.140286) " x="48.0916963" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(25.767941, 20.602061) rotate(142.000000) translate(-25.767941, -20.602061) " x="15.440214" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="60.4650347" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <ellipse id="Hip" fill="#546E7A" cx="37.4016992" cy="43.7778319" rx="7.57303555" ry="7.58356143"></ellipse>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(43.747456, 53.723829) rotate(48.000000) translate(-43.747456, -53.723829) " points="37.1914337 47.5824366 57.1918444 50.5903355 54.9539915 59.8652213 30.3030666 59.1548859"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(45.644646, 30.349404) rotate(30.000000) translate(-45.644646, -30.349404) " points="37.8325418 16.1748022 53.4858355 16.1060965 53.4858355 44.5927107 37.8034568 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-4" transform="translate(329.203540, 0.646018)">
+            <rect id="Rectangle" x="0" y="0.172217815" width="82.2707043" height="88.6921748"></rect>
+            <g id="Group" transform="translate(6.584071, 0.823009)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(33.896963, 58.195467) rotate(-37.000000) translate(-33.896963, -58.195467) " points="26.7559223 45.6726838 41.0380035 46.38614 37.2020972 70.1270513 29.9593078 70.7182496"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(30.154002, 68.233551) rotate(-7.000000) translate(-30.154002, -68.233551) " x="16.2127316" y="63.9281056" width="27.88254" height="8.61089076" rx="4.30544538"></rect>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(14.309025, 74.328193) rotate(136.000000) translate(-14.309025, -74.328193) " x="-1.09521789" y="69.6783117" width="30.8084855" height="9.29976202" rx="4.64988101"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="47.3314722" y="36.5101768" width="21.3421911" height="6.71649479" rx="3.3582474"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(26.629298, 16.954842) rotate(9.000000) translate(-26.629298, -16.954842) " points="19.4244256 14.0083611 33.8341703 13.0172042 31.1145986 20.8924806 21.5854536 19.9728005"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(48.075835, 32.114952) rotate(70.000000) translate(-48.075835, -32.114952) " x="36.5071637" y="28.4122694" width="23.1373435" height="7.40536605" rx="3.70268303"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(14.183409, 20.585821) rotate(142.000000) translate(-14.183409, -20.585821) " x="3.85568143" y="17.1414651" width="20.6554548" height="6.88871261" rx="3.4443563"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="48.8805022" cy="8.78310857" rx="8.77783666" ry="8.78310857"></ellipse>
+                <path d="M25.0413026,47.8765526 C28.2249397,47.8765526 30.9397774,45.3072779 30.8057875,42.1086056 C30.6717976,38.9099334 28.2249397,36.3406587 25.0413026,36.3406587 C21.8576655,36.3406587 19.2768178,38.9230565 19.2768178,42.1086056 C19.2768178,45.2941548 21.8576655,47.8765526 25.0413026,47.8765526 Z" id="Hip" fill="#546E7A"></path>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(25.072017, 56.074432) rotate(98.000000) translate(-25.072017, -56.074432) " points="12.7542288 48.5401539 37.389805 52.6990668 34.5755962 62.0026726 12.9774055 63.6087095"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(34.060114, 30.325481) rotate(30.000000) translate(-34.060114, -30.325481) " points="26.2480093 16.1620528 41.901303 16.0934013 41.901303 44.5575615 26.2189243 44.4790429"></polygon>
+            </g>
+        </g>
+        <g id="Group-4" transform="translate(246.902655, 1.115044)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(8.230088, 0.000000)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(25.453754, 58.844953) rotate(-10.000000) translate(-25.453754, -58.844953) " points="18.7667639 46.312292 32.1407438 47.1935502 29.2129388 70.7859502 21.9701495 71.3776149"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(17.631915, 70.093664) rotate(4.000000) translate(-17.631915, -70.093664) " x="3.69064519" y="65.7848223" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(15.858055, 74.559180) rotate(136.000000) translate(-15.858055, -74.559180) " x="0.453812113" y="69.905631" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="43.5449544" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(22.842780, 16.968217) rotate(9.000000) translate(-22.842780, -16.968217) " points="15.6379078 14.0194116 30.0476525 13.0274728 27.3280808 20.9089616 17.7989358 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(44.289318, 32.140286) rotate(70.000000) translate(-44.289318, -32.140286) " x="32.720646" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(10.396891, 20.602061) rotate(142.000000) translate(-10.396891, -20.602061) " x="0.0691636596" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="45.0939844" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <path d="M21.2547848,47.5696126 C24.4384219,47.5696126 27.1532596,44.9983111 27.0192697,41.7971156 C26.8852798,38.59592 24.4384219,36.0246186 21.2547848,36.0246186 C18.0711478,36.0246186 15.4903,38.6090535 15.4903,41.7971156 C15.4903,44.9851777 18.0711478,47.5696126 21.2547848,47.5696126 Z" id="Hip" fill="#546E7A"></path>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(24.018422, 54.257613) rotate(84.000000) translate(-24.018422, -54.257613) " points="14.981525 47.0453783 36.6749381 51.269554 33.6087633 59.6526109 11.3619059 61.4698479"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(30.273596, 30.349404) rotate(30.000000) translate(-30.273596, -30.349404) " points="22.4614915 16.1748022 38.1147852 16.1060965 38.1147852 44.5927107 22.4324065 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-4" transform="translate(903.663717, 1.115044)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(8.230088, 0.000000)">
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(17.631915, 70.093664) rotate(4.000000) translate(-17.631915, -70.093664) " x="3.69064519" y="65.7848223" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <polygon id="RightThigh" fill="#2C4C5C" transform="translate(24.018422, 54.257613) rotate(84.000000) translate(-24.018422, -54.257613) " points="14.981525 47.0453783 36.6749381 51.269554 33.6087633 59.6526109 11.3619059 61.4698479"></polygon>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(15.858055, 74.559180) rotate(136.000000) translate(-15.858055, -74.559180) " x="0.453812113" y="69.905631" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(25.300171, 56.102161) rotate(-10.000000) translate(-25.300171, -56.102161) " points="18.2299484 42.6822974 32.3703927 41.5051687 29.0756422 70.6991539 20.8039385 65.8744538"></polygon>
+                <rect id="RightHand" fill="#FFBA57" x="43.5449544" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(22.842780, 16.968217) rotate(9.000000) translate(-22.842780, -16.968217) " points="15.6379078 14.0194116 30.0476525 13.0274728 27.3280808 20.9089616 17.7989358 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(44.289318, 32.140286) rotate(70.000000) translate(-44.289318, -32.140286) " x="32.720646" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(10.396891, 20.602061) rotate(142.000000) translate(-10.396891, -20.602061) " x="0.0691636596" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="45.0939844" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <path d="M21.2547848,47.5696126 C24.4384219,47.5696126 27.1532596,44.9983111 27.0192697,41.7971156 C26.8852798,38.59592 24.4384219,36.0246186 21.2547848,36.0246186 C18.0711478,36.0246186 15.4903,38.6090535 15.4903,41.7971156 C15.4903,44.9851777 18.0711478,47.5696126 21.2547848,47.5696126 Z" id="Hip" fill="#546E7A"></path>
+                <polygon id="Body" fill="#00ACC1" transform="translate(30.273596, 30.349404) rotate(30.000000) translate(-30.273596, -30.349404) " points="22.4614915 16.1748022 38.1147852 16.1060965 38.1147852 44.5927107 22.4324065 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-5" transform="translate(411.504425, -2.353982)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(4.115044, 3.292035)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(39.931607, 54.457682) rotate(-68.000000) translate(-39.931607, -54.457682) " points="32.8917838 41.925021 46.9714301 50.7554524 43.3379588 66.3986792 36.0951694 66.9903439"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(44.925321, 67.344585) rotate(-53.000000) translate(-44.925321, -67.344585) " x="30.9840515" y="63.0357435" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(14.361890, 71.284460) rotate(136.000000) translate(-14.361890, -71.284460) " x="-1.04235312" y="66.6309113" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="52.8919991" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(32.189825, 16.968217) rotate(9.000000) translate(-32.189825, -16.968217) " points="24.9849526 14.0194116 39.3946973 13.0274728 36.6751256 20.9089616 27.1459806 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(53.636362, 32.140286) rotate(70.000000) translate(-53.636362, -32.140286) " x="42.0676907" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(19.743936, 20.602061) rotate(142.000000) translate(-19.743936, -20.602061) " x="9.41620841" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="54.4410291" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(27.930763, 53.487457) rotate(113.000000) translate(-27.930763, -53.487457) " points="16.8725026 45.7441866 40.8154328 50.2770889 38.0553291 59.2044582 18.146979 60.9885271 15.0460939 61.2307278"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(39.620641, 30.349404) rotate(30.000000) translate(-39.620641, -30.349404) " points="31.8085362 16.1748022 47.46183 16.1060965 47.46183 44.5927107 31.7794512 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-5" transform="translate(493.805310, -2.884956)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(2.469027, 4.115044)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(43.403289, 53.087885) rotate(-68.000000) translate(-43.403289, -53.087885) " points="36.7444564 40.5552239 50.0621208 41.5354713 47.1906313 65.0288822 39.947842 65.6205468"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(52.842586, 66.827524) rotate(90.000000) translate(-52.842586, -66.827524) " x="38.9013159" y="62.5186825" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(16.048308, 66.670547) rotate(157.000000) translate(-16.048308, -66.670547) " x="0.644064949" y="62.0169981" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="55.9900591" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(35.287885, 16.968217) rotate(9.000000) translate(-35.287885, -16.968217) " points="28.0830125 14.0194116 42.4927573 13.0274728 39.7731856 20.9089616 30.2440406 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(56.734422, 32.140286) rotate(70.000000) translate(-56.734422, -32.140286) " x="45.1657507" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(22.841996, 20.602061) rotate(142.000000) translate(-22.841996, -20.602061) " x="12.5142684" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="57.5390891" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(31.487478, 52.524526) rotate(113.000000) translate(-31.487478, -52.524526) " points="20.9777534 44.6557046 43.4371986 49.2006667 39.0693912 56.6411924 20.9819844 60.2696116 19.5377582 60.3933468"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(42.718701, 30.349404) rotate(30.000000) translate(-42.718701, -30.349404) " points="34.9065962 16.1748022 50.55989 16.1060965 50.55989 44.5927107 34.8775112 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-8" transform="translate(985.964602, -1.176991)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(6.584071, 1.646018)">
+                <rect id="RightHand" fill="#FFBA57" x="47.5035866" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(26.801412, 16.968217) rotate(9.000000) translate(-26.801412, -16.968217) " points="19.59654 14.0194116 34.0062847 13.0274728 31.286713 20.9089616 21.757568 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(48.247950, 32.140286) rotate(70.000000) translate(-48.247950, -32.140286) " x="36.6792782" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(14.355523, 20.602061) rotate(142.000000) translate(-14.355523, -20.602061) " x="4.02779588" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="49.0526166" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <polygon id="RightThigh" fill="#2C4C5C" transform="translate(25.825509, 52.494851) rotate(98.000000) translate(-25.825509, -52.494851) " points="15.7055274 44.7842082 37.8789689 49.8489487 35.37024 58.5981896 13.7720493 60.2054935"></polygon>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(14.333213, 71.259666) rotate(136.000000) translate(-14.333213, -71.259666) " x="-1.07102984" y="66.6061165" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(30.368384, 66.301883) rotate(-7.000000) translate(-30.368384, -66.301883) " x="16.4271141" y="61.9930415" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(33.438658, 55.317108) rotate(-37.000000) translate(-33.438658, -55.317108) " points="27.4027482 42.622717 39.4745674 45.0569511 36.9316668 68.0114982 28.8853266 59.8549316"></polygon>
+                <path d="M25.7281629,50.6703789 C29.6713671,50.6703789 33.0339236,47.4856042 32.8679658,43.5206523 C32.7020079,39.5557004 29.6713671,36.3709257 25.7281629,36.3709257 C21.7849586,36.3709257 18.58836,39.5719673 18.58836,43.5206523 C18.58836,47.4693373 21.7849586,50.6703789 25.7281629,50.6703789 Z" id="Hip" fill="#546E7A"></path>
+                <polygon id="Body" fill="#00ACC1" transform="translate(34.232228, 30.349404) rotate(30.000000) translate(-34.232228, -30.349404) " points="26.4201237 16.1748022 42.0734174 16.1060965 42.0734174 44.5927107 26.3910387 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-9" transform="translate(1068.265487, -0.176991)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(4.938053, 1.646018)">
+                <rect id="RightHand" fill="#FFBA57" x="51.5150836" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(30.812909, 16.968217) rotate(9.000000) translate(-30.812909, -16.968217) " points="23.608037 14.0194116 38.0177817 13.0274728 35.29821 20.9089616 25.769065 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(52.259447, 32.140286) rotate(70.000000) translate(-52.259447, -32.140286) " x="40.6907752" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(18.367020, 20.602061) rotate(142.000000) translate(-18.367020, -20.602061) " x="8.03929286" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="53.0641136" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <polygon id="RightThigh" fill="#2C4C5C" transform="translate(27.435513, 52.905851) rotate(110.000000) translate(-27.435513, -52.905851) " points="17.9853788 45.2127456 39.5970201 49.4795227 38.7845171 59.0853356 15.2740056 60.5989567"></polygon>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(14.361890, 71.284460) rotate(136.000000) translate(-14.361890, -71.284460) " x="-1.04235312" y="66.6309113" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(44.075987, 67.721720) rotate(-53.000000) translate(-44.075987, -67.721720) " x="30.1347175" y="63.4128782" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(39.430999, 52.826351) rotate(-62.000000) translate(-39.430999, -52.826351) " points="34.0385663 40.421515 44.8234314 43.1445193 42.3011152 65.2311879 34.9276291 60.6691342"></polygon>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(25.578453, 42.375443) rotate(-68.000000) translate(-25.578453, -42.375443) " points="23.7463667 40.4103405 28.5471169 39.8779945 27.9362645 44.4616599 22.6097892 44.8728907"></polygon>
+                <path d="M30.3435337,53.0819794 C34.5251921,53.0819794 38.0910896,49.7046144 37.915096,45.4998933 C37.7391023,41.2951721 34.5251921,37.9178071 30.3435337,37.9178071 C26.1618753,37.9178071 22.7719714,41.3124227 22.7719714,45.4998933 C22.7719714,49.6873638 26.1618753,53.0819794 30.3435337,53.0819794 Z" id="Hip" fill="#546E7A"></path>
+                <polygon id="Body" fill="#00ACC1" transform="translate(38.243725, 30.349404) rotate(30.000000) translate(-38.243725, -30.349404) " points="30.4316207 16.1748022 46.0849144 16.1060965 46.0849144 44.5927107 30.4025357 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-9" transform="translate(1150.566372, -3.176991)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(1.646018, 4.115044)">
+                <rect id="RightHand" fill="#FFBA57" x="57.0227458" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(36.320572, 16.968217) rotate(9.000000) translate(-36.320572, -16.968217) " points="29.1156992 14.0194116 43.5254439 13.0274728 40.8058722 20.9089616 31.2767272 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(57.767109, 32.140286) rotate(70.000000) translate(-57.767109, -32.140286) " x="46.1984374" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(23.874682, 20.602061) rotate(142.000000) translate(-23.874682, -20.602061) " x="13.5469551" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="58.5717758" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <polygon id="RightThigh" fill="#2C4C5C" transform="translate(32.278923, 53.538726) rotate(113.000000) translate(-32.278923, -53.538726) " points="22.9344659 45.7540561 43.6144234 50.5270389 42.4621213 59.687434 20.9434218 61.3233969"></polygon>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(16.048308, 68.394084) rotate(157.000000) translate(-16.048308, -68.394084) " x="0.644064949" y="63.7405348" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(52.991875, 66.450569) rotate(-88.000000) translate(-52.991875, -66.450569) " x="39.0506049" y="62.1417278" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(45.047345, 52.068878) rotate(-68.000000) translate(-45.047345, -52.068878) " points="40.1609524 40.6726258 50.3742421 42.1022327 49.2177132 50.4643127 47.8813661 63.4651303 39.7204476 58.0004458"></polygon>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(31.110158, 42.337274) rotate(-68.000000) translate(-31.110158, -42.337274) " points="28.8878147 40.1701364 34.1231681 39.8478503 33.4236224 44.4154668 28.0971471 44.8266976"></polygon>
+                <path d="M35.6757785,52.9972778 C39.8574369,52.9972778 43.4233345,49.6199129 43.2473408,45.4151917 C43.0713471,41.2104706 39.8574369,37.8331056 35.6757785,37.8331056 C31.4941202,37.8331056 28.1042163,41.2277212 28.1042163,45.4151917 C28.1042163,49.6026623 31.4941202,52.9972778 35.6757785,52.9972778 Z" id="Hip" fill="#546E7A"></path>
+                <polygon id="Body" fill="#00ACC1" transform="translate(43.751387, 30.349404) rotate(30.000000) translate(-43.751387, -30.349404) " points="35.9392829 16.1748022 51.5925766 16.1060965 51.5925766 44.5927107 35.9101979 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-9" transform="translate(1232.867257, -9.176991)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(1.646018, 10.699115)">
+                <rect id="RightHand" fill="#FFBA57" x="58.0025677" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(37.300393, 16.968217) rotate(9.000000) translate(-37.300393, -16.968217) " points="30.0955211 14.0194116 44.5052658 13.0274728 41.7856941 20.9089616 32.2565491 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(58.746931, 32.140286) rotate(70.000000) translate(-58.746931, -32.140286) " x="47.1782593" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(24.854504, 20.602061) rotate(142.000000) translate(-24.854504, -20.602061) " x="14.526777" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="59.5515977" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <polygon id="RightThigh" fill="#2C4C5C" transform="translate(33.067181, 53.466145) rotate(113.000000) translate(-33.067181, -53.466145) " points="22.4758144 45.7416174 45.80939 51.5093824 42.9926864 60.0334726 20.3249727 61.1906735"></polygon>
+                <rect id="RightLeg" fill="#FFBA57" x="0" y="58.9449547" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(59.321282, 63.482884) rotate(56.000000) translate(-59.321282, -63.482884) " x="45.3800115" y="59.1740423" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(44.870804, 51.090749) rotate(-76.000000) translate(-44.870804, -51.090749) " points="40.9433444 40.1173275 50.1977012 42.3175234 49.2558544 48.8157173 46.9642669 62.0641705 39.5439067 58.2157365"></polygon>
+                <polygon id="LeftThigh" fill="#546E7A" transform="translate(32.089980, 42.337274) rotate(-68.000000) translate(-32.089980, -42.337274) " points="29.8676366 40.1701364 35.10299 39.8478503 34.4034443 44.4154668 29.076969 44.8266976"></polygon>
+                <path d="M36.6556004,52.9972778 C40.8372588,52.9972778 44.4031564,49.6199129 44.2271627,45.4151917 C44.051169,41.2104706 40.8372588,37.8331056 36.6556004,37.8331056 C32.4739421,37.8331056 29.0840382,41.2277212 29.0840382,45.4151917 C29.0840382,49.6026623 32.4739421,52.9972778 36.6556004,52.9972778 Z" id="Hip" fill="#546E7A"></path>
+                <polygon id="Body" fill="#00ACC1" transform="translate(44.731209, 30.349404) rotate(30.000000) translate(-44.731209, -30.349404) " points="36.9191048 16.1748022 52.5723985 16.1060965 52.5723985 44.5927107 36.8900198 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-6" transform="translate(658.407080, -1.000000)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group" transform="translate(0.000000, 2.469027)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(44.456068, 56.703416) rotate(-32.000000) translate(-44.456068, -56.703416) " points="37.2973123 44.2542952 51.6148237 49.2459873 51.5441952 66.8487207 42.9424718 69.1525362"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(58.153339, 72.426529) rotate(55.000000) translate(-58.153339, -72.426529) " x="44.2120695" y="68.1176873" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="60.1208058" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(39.418632, 16.968217) rotate(9.000000) translate(-39.418632, -16.968217) " points="32.2137592 14.0194116 46.6235039 13.0274728 43.9039322 20.9089616 34.3747872 19.988556"></polygon>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(60.865169, 32.140286) rotate(70.000000) translate(-60.865169, -32.140286) " x="49.2964974" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(26.972742, 20.602061) rotate(142.000000) translate(-26.972742, -20.602061) " x="16.6450151" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="61.6698358" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+                <path d="M37.8306363,47.5696126 C41.0142733,47.5696126 43.729111,44.9983111 43.5951211,41.7971156 C43.4611312,38.59592 41.0142733,36.0246186 37.8306363,36.0246186 C34.6469992,36.0246186 32.0661514,38.6090535 32.0661514,41.7971156 C32.0661514,44.9851777 34.6469992,47.5696126 37.8306363,47.5696126 Z" id="Hip" fill="#546E7A"></path>
+                <path d="M5.41225491,53.0395283 L25.7503092,53.0040415 L25.7503092,53.0040415 C28.315909,52.999565 30.3993676,55.0757656 30.4038441,57.6413654 C30.4038488,57.6440672 30.4038512,57.6467691 30.4038512,57.6494709 L30.4038512,57.6494709 L30.4038512,57.6494709 C30.4038512,60.2195551 28.3203863,62.30302 25.7503021,62.30302 L4.25884005,62.30302 L4.25884005,62.30302 C1.98432367,62.30302 0.140463834,60.4591601 0.140463834,58.1846438 C0.140463834,58.0143865 0.151021703,57.844293 0.17207666,57.6753426 L0.17207666,57.6753426 L0.17207666,57.6753426 C0.501658996,55.0306891 2.74714798,53.0441784 5.41225491,53.0395283 Z" id="RightLeg" fill="#FFBA57" transform="translate(15.272158, 57.653527) rotate(213.000000) translate(-15.272158, -57.653527) "></path>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(32.368560, 50.261035) rotate(136.000000) translate(-32.368560, -50.261035) " points="19.5848459 43.1685351 45.152275 42.4249531 43.699767 51.4683903 24.0155819 58.097116"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(46.849447, 30.349404) rotate(30.000000) translate(-46.849447, -30.349404) " points="39.0373429 16.1748022 54.6906366 16.1060965 54.6906366 44.5927107 39.0082579 44.5141301"></polygon>
+            </g>
+        </g>
+        <g id="Group-7" transform="translate(740.707965, -1.884956)">
+            <rect id="Rectangle" x="0.186116149" y="0" width="79.7675389" height="88.7621394"></rect>
+            <g id="Group-10" transform="translate(1.646018, 3.292035)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(45.140823, 54.019390) rotate(-62.000000) translate(-45.140823, -54.019390) " points="38.6267519 41.4867289 51.6548937 42.3271044 48.4003243 66.0343885 41.7327715 66.5520518"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(50.070949, 68.073570) rotate(119.000000) translate(-50.070949, -68.073570) " x="36.5538556" y="63.764728" width="27.0341868" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="56.7235163" y="36.5389778" width="20.6928344" height="6.72179308" rx="3.36089654"></rect>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(57.445232, 32.140286) rotate(70.000000) translate(-57.445232, -32.140286) " x="46.2285479" y="28.4346824" width="22.4333675" height="7.41120776" rx="3.70560388"></rect>
+                <path d="M35.6956186,49.982564 C39.3814565,49.982564 42.5245446,46.9122365 42.3694185,43.0897681 C42.2142924,39.2672997 39.3814565,36.1969722 35.6956186,36.1969722 C32.0097807,36.1969722 29.0218187,39.2829821 29.0218187,43.0897681 C29.0218187,46.8965541 32.0097807,49.982564 35.6956186,49.982564 Z" id="Hip" fill="#546E7A"></path>
+                <rect id="RightLeg" fill="#FFBA57" transform="translate(15.718295, 61.778641) rotate(13.000000) translate(-15.718295, -61.778641) " x="0.782741446" y="57.1250915" width="29.8711077" height="9.30709812" rx="4.65354906"></rect>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(30.752892, 52.633339) rotate(121.000000) translate(-30.752892, -52.633339) " points="18.9528991 45.0276367 42.5528852 46.4698923 39.5884482 55.1231161 19.1503776 60.2390418"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(43.855952, 30.349404) rotate(30.000000) translate(-43.855952, -30.349404) " points="36.2815381 16.1748022 51.4585653 16.1060965 51.4585653 44.5927107 36.253338 44.5141301"></polygon>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(36.651226, 16.968217) rotate(9.000000) translate(-36.651226, -16.968217) " points="29.6655685 14.0194116 43.6368829 13.0274728 41.0000568 20.9089616 31.7608452 19.988556"></polygon>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(24.584015, 20.602061) rotate(142.000000) translate(-24.584015, -20.602061) " x="14.5705184" y="17.1549872" width="20.0269927" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="58.2254156" cy="8.79003711" rx="8.51076252" ry="8.79003711"></ellipse>
+            </g>
+        </g>
+        <g id="Group-7" transform="translate(576.106195, -2.884956)">
+            <rect id="Rectangle" x="0" y="0" width="82.2707043" height="88.7621394"></rect>
+            <g id="Group-11" transform="translate(0.823009, 4.115044)">
+                <polygon id="LeftThigh" fill="#2C4C5C" transform="translate(47.826129, 53.515980) rotate(-69.000000) translate(-47.826129, -53.515980) " points="41.1076419 40.9833187 54.5446165 41.8236943 51.5541535 65.456977 44.3111307 66.0486417"></polygon>
+                <rect id="LeftLeg" fill="#FFBA57" transform="translate(63.357476, 65.961553) rotate(56.000000) translate(-63.357476, -65.961553) " x="49.4162064" y="61.6527115" width="27.88254" height="8.61768344" rx="4.30884172"></rect>
+                <rect id="RightLeg" fill="#FFBA57" x="0" y="59.4620157" width="30.8084855" height="9.30709812" rx="4.65354906"></rect>
+                <rect id="RightHand" fill="#FFBA57" x="59.3794833" y="36.5389778" width="21.3421911" height="6.72179308" rx="3.36089654"></rect>
+                <rect id="RightArm" fill="#FFBA57" transform="translate(60.123847, 32.140286) rotate(70.000000) translate(-60.123847, -32.140286) " x="48.5551748" y="28.4346824" width="23.1373435" height="7.41120776" rx="3.70560388"></rect>
+                <path d="M37.6917143,49.982564 C41.4932165,49.982564 44.734937,46.9122365 44.574943,43.0897681 C44.414949,39.2672997 41.4932165,36.1969722 37.6917143,36.1969722 C33.890212,36.1969722 30.8084855,39.2829821 30.8084855,43.0897681 C30.8084855,46.8965541 33.890212,49.982564 37.6917143,49.982564 Z" id="Hip" fill="#546E7A"></path>
+                <polygon id="RightThigh" fill="#546E7A" transform="translate(32.967968, 53.517149) rotate(119.000000) translate(-32.967968, -53.517149) " points="19.9163691 45.655481 46.0195678 49.5774299 42.7653331 58.8821723 20.4928369 61.378817"></polygon>
+                <polygon id="Body" fill="#00ACC1" transform="translate(46.108125, 30.349404) rotate(30.000000) translate(-46.108125, -30.349404) " points="38.2960204 16.1748022 53.9493141 16.1060965 53.9493141 44.5927107 38.2669353 44.5141301"></polygon>
+                <polygon id="LeftArm" fill="#FFBA57" transform="translate(38.677309, 16.968217) rotate(9.000000) translate(-38.677309, -16.968217) " points="31.4724367 14.0194116 45.8821814 13.0274728 43.1626097 20.9089616 33.6334647 19.988556"></polygon>
+                <rect id="LeftHand" fill="#FFBA57" transform="translate(26.231420, 20.602061) rotate(142.000000) translate(-26.231420, -20.602061) " x="15.9036925" y="17.1549872" width="20.6554548" height="6.89414675" rx="3.44707338"></rect>
+                <ellipse id="Head" fill="#FFBA57" cx="60.9285133" cy="8.79003711" rx="8.77783666" ry="8.79003711"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

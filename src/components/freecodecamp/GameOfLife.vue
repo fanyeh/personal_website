@@ -1,28 +1,21 @@
 <template>
-  <div id="app">
-    <div class="title">
-      <h2>Generations : {{generations}}</h2>
+  <div class="game">
+    <h1>GameOfLife</h1>
+    <!-- Game board -->
+    <table>
+      <tr v-for="(cell, x) in cells">
+        <td @click="becomeAlive(x,y,1)" class="game__cell" :class="cellColor(cell[y])" v-for="(col ,y) in cell"></td>
+      </tr>
+    </table>
+    <div class="game__generation">
+      <h5>Generations : {{generations}}</h5>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1">
-          <p>
-            <button class="btn" @click="startGame">Start</button>
-          </p>
-          <p>
-            <button class="btn" @click="stopGame">Stop</button>
-          </p>
-          <p>
-            <button class="btn" @click="clearBoard">Clear</button>
-          </p>
-        </div>
-        <div class="col-md-11">
-          <table>
-            <tr v-for="(cell, x) in cells">
-              <td @click="becomeAlive(x,y,1)" class="cell" :class="cellColor(cell[y])" v-for="(col ,y) in cell"></td>
-            </tr>
-          </table>
-        </div>
+    <!--Control buttons-->
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn" @click="startGame">Start</button>
+        <button class="btn" @click="stopGame">Stop</button>
+        <button class="btn" @click="clearBoard">Clear</button>
       </div>
     </div>
   </div>
@@ -126,13 +119,19 @@ export default {
     },
     cellColor(state) {
       if (state === 1) {
-        return 'cell-newborn'
+        return 'game__cell--newborn'
       } else if (state === 2) {
-        return 'cell-alive'
+        return 'game__cell--alive'
       }
     }
   },
   created() {
+    if (window.innerWidth < 376) {
+      this.columns = 20
+      this.rows = 20
+    } else if (window.innerWidth < 768) {
+      this.columns = 30
+    }
     for (let i = 0; i < this.rows; i++) {
       this.cells[i] = []
       for (let j = 0; j < this.columns; j++) {
@@ -144,30 +143,38 @@ export default {
 }
 </script>
 
-<style scoped lang='scss' >
+<style scoped lang='scss'>
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
 table {
   margin: 0 auto;
   border-spacing: 1px;
   border-collapse: separate;
 }
 
-.cell {
+.game__cell {
   width: 16px;
   height: 16px;
   background-color: #303030;
 }
 
-.cell-newborn {
+.game__cell--newborn {
   background-color: #9ae6c3;
 }
 
-.cell-alive {
+.game__cell--alive {
   background-color: #42b883;
 }
 
-.title {
+.game__generation {
   text-align: center;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .btn {
@@ -178,9 +185,5 @@ table {
 .btn:hover {
   background-color: #303030;
   color: white;
-}
-
-h2 {
-  margin-bottom: 30px;
 }
 </style>

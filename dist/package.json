@@ -1,0 +1,10 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "personalwebsite",
+  "author": "Jack Yeh",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install express"
+  }
+}

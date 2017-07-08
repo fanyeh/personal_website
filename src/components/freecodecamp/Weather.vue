@@ -1,37 +1,18 @@
 <template>
   <div id="app">
-    <div v-if="loading">
-      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+  
+    <div v-if="loading" class="loader">
+      <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
       <span class="sr-only">Loading...</span>
     </div>
-    <div v-else id="info">
-      <div id="desc">
-        <p id="description">{{description}}</p>
-      </div>
   
-      <div>
-        <p id="location">{{location}} , {{country}}</p>
-      </div>
-  
-      <div id="icon">
-        <i :class="iconClass"></i>
-      </div>
-      <div id="temp">
-        <p id="temperature">{{temperature}}</p>
-      </div>
-  
+    <div v-else class="weather">
+      <div class="weather__description">{{description}}</div>
+      <div class="weather__location">{{location}} , {{country}}</div>
+      <i class="weather__icon" :class="iconClass"></i>
+      <div class="weather__temperature">{{temperature}}</div>
     </div>
-    <p id="credit">Powered by
-      <a href="https://vuejs.org" target="_blank">
-        <span style="color:#3bb981">Vue.js</span>
-      </a> /
-      <a href="https://openweathermap.org/" target="_blank">
-        <span style="color:#ff8c00">OpenWeatherMap</span>
-      </a> /
-      <a href="https://erikflowers.github.io/weather-icons/" target="_blank">
-        <span style="color:#934aa5">Weather Icons</span>
-      </a>
-    </p>
+  
   </div>
 </template>
 
@@ -81,57 +62,68 @@ export default {
 
 <style scoped lang="scss">
 @import "../../assets/styles/weather-icons.css";
-@import "../../assets/styles/font-awesome.css";
+$iconSize: 8em;
+$description: 5em;
+$location: 1.375em;
+$temperature: 4em;
+$icon_margin: 0.5em;
+$modifier: 1.5;
+$font_weight:700;
 
-div {
+#app {
   text-align: center;
 }
 
-#info {
-  transform: translateY(-20%);
-}
-
-$iconSize: 200px;
-#icon {
-  height: $iconSize;
-  margin: 90px;
-}
-
-i.wi {
-  font-size: $iconSize;
-  font-weight: 900;
-  line-height: $iconSize;
-}
-
-#credit {
+.loader {
   position: absolute;
-  bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0)
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#desc {
-  height: 80px;
+.weather {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#description {
-  font-size: 80px;
-  font-weight: 900;
-  line-height: 80px;
+.weather__icon {
+  font-size: $iconSize;
+  margin: $icon_margin;
 }
 
-#location {
-  font-size: 22px;
+.weather__description {
+  font-size: $description;
 }
 
-#temp {
-  height: 80px;
-  margin-top: 30px;
+.weather__location {
+  font-size: $location;
 }
 
-#temperature {
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 80px;
+.weather__temperature {
+  font-size: $temperature;
+}
+
+// IPad pro or above
+@media (min-width: 992px) {
+  .weather__icon {
+    font-size: $iconSize * $modifier;
+    margin: $icon_margin;
+  }
+
+  .weather__description {
+    font-size: $description * $modifier;
+    font-weight: $font_weight;
+  }
+
+  .weather__location {
+    font-size: $location * $modifier;
+  }
+
+  .weather__temperature {
+    font-size: $temperature * $modifier;
+    font-weight: $font_weight;
+  }
 }
 </style>

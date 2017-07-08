@@ -1,12 +1,12 @@
 <template>
-  <div id="wiki">
-    <div id="search-bar" :class="moveSearchBar ? 'on-search':''">
-      <input id="search-input" type="search" v-on:keyup.enter="getWiki" v-model="searchTxt" placeholder="Enter search text"></input>
-      <p id="random-wiki">
+  <div class="wiki">
+    <div :class="moveSearchBar ? 'on-search':''">
+      <input class="wiki__search-input" type="search" v-on:keyup.enter="getWiki" v-model="searchTxt" placeholder="Enter search text"></input>
+      <p class="wiki__random">
         <a href="https://en.wikipedia.org/wiki/Special:Random " target="_blank ">Random</a>
       </p>
     </div>
-    <div id="extract" :class="searched ? 'expand' : ''">
+    <div class="wiki__extract" :class="searched ? 'expand' : ''">
       <extract :pages="searchPages" v-if="searched"></extract>
     </div>
   </div>
@@ -47,8 +47,8 @@ div {
   text-align: center;
 }
 
-#search-input {
-  width: 40%;
+.wiki__search-input {
+  width: 85%;
   height: 35px;
   border: none;
   border: 4px solid #42b883;
@@ -59,11 +59,11 @@ div {
   text-align: left;
 }
 
-input#search-input:focus {
+.wiki__search-input:focus {
   outline-width: 0;
 }
 
-#random-wiki {
+.wiki__random {
   display: inline-block;
   margin-top: 1%;
   padding: 0 5px;
@@ -77,15 +77,15 @@ input#search-input:focus {
   }
 }
 
-#random-wiki:hover {
+.wiki__random:hover {
   background-color: #303030;
   a {
     color: white;
   }
 }
 
-#extract {
-  margin-top: 20px;
+.wiki__extract {
+  margin-top: 3%;
   overflow-y: auto;
 }
 

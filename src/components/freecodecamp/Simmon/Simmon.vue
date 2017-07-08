@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div class='container'>
+  <div class="simmon">
+    <div class='game'>
       <color-block v-for="block in blocks" :position="block" :key="block"></color-block>
       <div class="v-line"></div>
       <div class="h-line"></div>
@@ -32,11 +32,23 @@ export default {
 <style scoped lang="scss">
 @import "../../../assets/styles/simmon-setting.scss";
 
-.container {
-  @include componentSize(relative, $gamePad, $gamePad);
-  margin: auto;
+@media (min-width: 767px) {
+  $gamePad: 410px;
+  $blockSize: 350px;
+}
+
+.simmon {
+  height: 100%;
+}
+
+.game {
+  @include componentSize(relative, $gamePad, $gamePad); // margin: auto;
   border-radius: 50%;
   background-color: $borderColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .v-line {
@@ -72,5 +84,17 @@ export default {
   @include componentPos(($gamePad - ($blockSize/2))/2, ($gamePad - ($blockSize/2))/2, '');
   background-color: $borderColor;
   border-radius: 50%;
+}
+
+@media (max-width:767px) {
+  .game-board {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width:361px) {
+  .game-board {
+    transform: scale(0.6)
+  }
 }
 </style>

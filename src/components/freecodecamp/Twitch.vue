@@ -1,58 +1,38 @@
 <template>
-  <div id="twitch">
-    <div class="row">
+  <div class="twitch container-fluid">
+  
+    <div class="row status">
       <div class="button" @click="changeShowStatus('offline')">Offline</div>
       <div class="button" @click="changeShowStatus('online')">Online</div>
       <div class="button" @click="changeShowStatus('all')">All</div>
     </div>
     <br>
-    <div class="row">
-      <div class="title cell col-2">
-        <div class="content">Twitch Streamer</div>
-      </div>
-      <div class="title cell col-2">
-        <div class="content">Channel</div>
-      </div>
-      <div class="title cell col-2">
-        <div class="content">Status</div>
-      </div>
-      <div class="title cell col-2">
-        <div class="content">Game</div>
-      </div>
-      <div class="title cell col-4">
-        <div class="content">Info</div>
-      </div>
-    </div>
   
-    <div class="row _content" v-for="(host,index) in hosts" :key="index">
-      <template v-if="host.status === showStatus || showStatus === 'all'">
-        <div class="item cell col-2">
-          <div class="content">
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th>Twitch Streamer</th>
+          <th>Channel</th>
+          <th>Status</th>
+          <th class="hidden-sm-down">Game</th>
+          <th class="hidden-sm-down">Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(host,index) in hosts" :key="index" v-if="host.status === showStatus || showStatus === 'all'">
+          <td>
             <img v-if="host.status === 'online'" :src="host.channel.logo " height=50 width=50></img>
-          </div>
-        </div>
-        <div class="item cell col-2 ">
-          <div class="content" :class="host.status === 'online' ? 'highlight':''">
+          </td>
+          <td :class="host.status === 'online' ? 'highlight':''">
             <a :href="host.channel.url " target=_blank>{{host.name}}</a>
-          </div>
-        </div>
-        <div class="item cell col-2 ">
-          <div class="content" :class="host.status === 'online' ? 'highlight':''">{{host.status}}</div>
-        </div>
-        <div class="item cell col-2 ">
-          <div class="content" :class="host.status === 'online' ? 'highlight':''">{{host.channel.game}}</div>
-        </div>
-        <div class="item cell col-4 ">
-          <div class="content" :class="host.status === 'online' ? 'highlight':''">{{host.channel.status}}</div>
-        </div>
-      </template>
-    </div>
-    <br>
-    <p class="footer">Powered by
-      <span>
-        <a href="https://vuejs.org ">Vue.js</a>
-      </span>
-    </p>
+          </td>
+          <td :class="host.status === 'online' ? 'highlight':''">{{host.status}}</td>
+          <td class="hidden-sm-down" :class="host.status === 'online' ? 'highlight':''">{{host.channel.game}}</td>
+          <td class="hidden-sm-down" :class="host.status === 'online' ? 'highlight':''">{{host.channel.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
   </div>
 </template>
 
@@ -135,82 +115,24 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-$itemBorder: 2px;
-$gridSize: 80%;
-$gridUnit: $gridSize * 1 / 12;
-$col-2: $gridUnit / $gridSize * 100% * 2;
-$col-4: $gridUnit / $gridSize * 100% * 4;
-$col-6: $gridUnit / $gridSize * 100% * 6;
-
-#twitch {
-  height: 90vh;
+.table>thead>tr>th {
+  text-align: center;
 }
 
-div {
-  text-align: center;
+.table-responsive {
+  display: table;
 }
 
 .button {
-  width: 80px;
-  height: 30px;
+  margin: 0 10px;
   float: right;
   text-align: center;
   color: #42b883;
-  font-size: 18px; // font-weight: 500;
+  font-size: 1.1em;
 }
 
 .button:hover {
   text-decoration: underline;
-}
-
-.row {
-  width: $gridSize;
-  overflow: hidden;
-  margin: auto;
-}
-
-.cell {
-  border-bottom: 1px solid #303030;
-  position: relative;
-  float: left;
-  color: #303030;
-  vertical-align: middle;
-}
-
-.title {
-  height: 40px;
-  font-weight: 700;
-}
-
-.item {
-  height: 80px;
-}
-
-.content {
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  img {
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0 auto;
-    border: none;
-    border-radius: 50%;
-  }
-}
-
-.col-2 {
-  width: $col-2;
-}
-
-.col-4 {
-  width: $col-4;
-}
-
-.col-6 {
-  width: $col-6;
 }
 
 a:link,
@@ -219,26 +141,29 @@ a:visited {
   cursor: pointer;
 }
 
-p {
-  margin-top: 40px;
-  color: #303030;
-}
-
-span {
-  color: #42b883;
-  a {
-    text-decoration: none;
-  }
-}
-
 .highlight {
   color: #42b883;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+.status {
+  float: right;
+  margin-bottom: 2%;
+}
+
+// Mobile
+@media (max-width: 767px) {
+  .table {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 575px) {
+  .button {
+    font-size: 0.9em;
+  }
+
+  .table {
+    font-size: 0.8em;
+  }
 }
 </style>
