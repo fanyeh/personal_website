@@ -36,9 +36,7 @@
         </a>
       </p>
     </div>
-    <!--<transition name="fade">
-                      <router-view></router-view>
-                    </transition>-->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -136,20 +134,5 @@ hr {
     -webkit-column-count: 4;
     column-count: 4;
   }
-}
-
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  transition: opacity 2s ease;
-}
-
-.fade-leave {}
-
-.fade-leave-active {
-  transition: opacity 2s ease;
-  opacity: 0;
 }
 </style>
