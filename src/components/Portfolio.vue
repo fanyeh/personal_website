@@ -12,9 +12,8 @@
         <p class="project-title">{{project}}</p>
         <hr>
         <!--<router-link :to="{name: 'portfolio' , params: {projectName:project}}">
-              <img :src="projectImagePath(project)" width="100%"></img>
-            </router-link>-->
-  
+                <img :src="projectImagePath(project)" width="100%"></img>
+              </router-link>-->
         <a :href="'/portfolio/'+ project">
           <img :src="projectImagePath(project)" width="100%"></img>
         </a>
@@ -41,8 +40,8 @@
       </p>
     </div>
     <!--<transition name="fade">
-                  <router-view></router-view>
-                </transition>-->
+                    <router-view></router-view>
+                  </transition>-->
   </div>
 </template>
 
