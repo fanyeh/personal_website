@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3d6ef69-3b6f-4154-94bf-ae0b6952b913" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/styles/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/styles/reset.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Grid.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Calculator/CalculatorButton.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/FreeCodeCampBanner.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/my_photo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/photo.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/About.png" afterPath="$PROJECT_DIR$/static/About.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/styles/simmon-setting.scss" afterPath="$PROJECT_DIR$/src/assets/styles/simmon-setting.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/About.vue" afterPath="$PROJECT_DIR$/src/components/About.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Portfolio.vue" afterPath="$PROJECT_DIR$/src/components/Portfolio.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/PortfolioItem.vue" afterPath="$PROJECT_DIR$/src/components/PortfolioItem.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Calculator.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Calculator.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Clock.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Clock.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/GameOfLife.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/GameOfLife.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Leaderboard.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Leaderboard.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Markdown.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Markdown.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Quote.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Quote.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Receipe.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Receipe.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Simmon/Controller.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Simmon/Controller.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Simmon/Simmon.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Simmon/Simmon.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/TicTacToe.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/TicTacToe.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Twitch.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Twitch.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Weather.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Weather.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Wiki/Extract.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Wiki/Extract.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Wiki/Page.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Wiki/Page.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/freecodecamp/Wiki/Wiki.vue" afterPath="$PROJECT_DIR$/src/components/freecodecamp/Wiki/Wiki.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +22,7 @@
     <favorites_list name="portfolio" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,6 +75,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -123,8 +97,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -152,6 +124,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -183,19 +160,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -218,7 +195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -226,7 +202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30669144">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>

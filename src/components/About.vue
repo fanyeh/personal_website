@@ -272,6 +272,25 @@ p.about-me__console--msg--error {
 // Desktop 
 @media (min-width: 1200px) {
   .about-me__caption {
+    font-size: 2.8em;
+  }
+
+  .about-me__caption--sm {
+    font-size: 1em;
+  }
+  .about-me__caption--xs {
+    font-size: 1em;
+  }
+
+  .about-me__console {
+    p {
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-me__caption {
     font-size: 3.3em;
   }
 
