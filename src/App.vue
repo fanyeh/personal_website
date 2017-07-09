@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container-fluid">
-    <router-view class="view one"></router-view>
-    <router-view class="view two" name="portfolio"></router-view>
+    <router-view></router-view>
+    <router-view name="portfolio"></router-view>
   </div>
 </template>
 
@@ -17,7 +17,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang='scss'>
-
-</style>

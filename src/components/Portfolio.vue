@@ -36,30 +36,19 @@
         </a>
       </p>
     </div>
-    <router-view></router-view>
+    <!--<transition name="fade">
+              <router-view></router-view>
+            </transition>-->
   </div>
 </template>
 
 <script>
-
-/* If required */
-/* import otherComponent from './components/OtherComponent' */
-import PortfolioItem from './PortfolioItem'
-import Quote from '../components/freecodecamp/Quote'
-import Weather from '../components/freecodecamp/Weather'
-
 export default {
-  name: 'grid',
+  name: 'freecodecamp',
   data() {
     return {
-      projects: ['quote', 'weather', 'wiki', 'twitch', 'calculator', 'clock', 'ticTacToe', 'simmon', 'markdown', 'leaderboard', 'receipe', 'gameOfLife'],
-      selectedProject: ''
+      projects: ['quote', 'weather', 'wiki', 'twitch', 'calculator', 'clock', 'ticTacToe', 'simmon', 'markdown', 'leaderboard', 'receipe', 'gameOfLife']
     }
-  },
-  components: {
-    PortfolioItem,
-    'quote': Quote,
-    'weather': Weather
   },
   methods: {
     projectImagePath(project) {
@@ -147,5 +136,20 @@ hr {
     -webkit-column-count: 4;
     column-count: 4;
   }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: opacity 2s ease;
+}
+
+.fade-leave {}
+
+.fade-leave-active {
+  transition: opacity 2s ease;
+  opacity: 0;
 }
 </style>

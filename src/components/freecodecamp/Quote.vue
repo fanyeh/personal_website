@@ -18,7 +18,7 @@
     </div>
   
     <div class="quote__btn">
-      <button class="btn btn-default" @click="getQuote">New Quote</button>
+      <button class="btn btn-default" @click="getQuote" :disabled="newQuote">New Quote</button>
     </div>
   
   </div>
@@ -37,12 +37,14 @@ export default {
       href: '',
       popQuote: false,
       quoteString: [],
-      loading: true
+      loading: true,
+      newQuote: true
     }
   },
   methods: {
     getQuote() {
       this.popQuote = false
+      this.newQuote = true
       this.loading = true
       this.quoteString = []
       axios.get('https://andruxnet-random-famous-quotes.p.mashape.com/cat=', {
@@ -78,6 +80,7 @@ export default {
 
       setTimeout(() => {
         this.popQuote = true
+        this.newQuote = false
       }, this.quote.split('').length * interval)
     }
   },

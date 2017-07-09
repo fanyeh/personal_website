@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PortfolioItem from 'components/PortfolioItem'
 import About from 'components/About'
 import Portfolio from 'components/Portfolio'
+import PortfolioItem from 'components/PortfolioItem'
 
 Vue.use(Router)
 
@@ -17,10 +17,9 @@ export default new Router({
     }
   },
   {
-    path: '/portfolio/:projectName',
+    path: '#/portfolio/:projectName',
     name: 'portfolio',
     component: PortfolioItem,
     props: true
-  }
-  ]
+  }]
 })

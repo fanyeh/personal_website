@@ -1,24 +1,22 @@
 <template>
-  <section>
-    <div class="container">
-      <div class="close-btn">
-        <i class="fa fa-times-circle fa-2x" aria-hidden="true" @click="closeSlider" cp></i>
+  <div class="container">
+    <div class="close-btn">
+      <i class="fa fa-times-circle fa-2x" aria-hidden="true" @click="closeSlider" cp></i>
+    </div>
+    <div class="row slide">
+      <div class="hidden-sm-down col-md-1">
+        <i class="fa fa-chevron-left fa-2x slide-ctrl__btn" aria-hidden="true" @click="prevContent"></i>
       </div>
-      <div class="row slide">
-        <div class="hidden-sm-down col-md-1">
-          <i class="fa fa-chevron-left fa-2x slide-ctrl__btn" aria-hidden="true" @click="prevContent"></i>
+      <div class="col-md-10">
+        <div class="slide-content">
+          <component :is="$route.params.projectName"></component>
         </div>
-        <div class="col-md-10">
-          <div class="slide-content">
-            <component :is="$route.params.projectName"></component>
-          </div>
-        </div>
-        <div class="hidden-sm-down col-md-1">
-          <i class="fa fa-chevron-right fa-2x slide-ctrl__btn" aria-hidden="true" @click="nextContent"></i>
-        </div>
+      </div>
+      <div class="hidden-sm-down col-md-1">
+        <i class="fa fa-chevron-right fa-2x slide-ctrl__btn" aria-hidden="true" @click="nextContent"></i>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -79,6 +77,9 @@ export default {
   },
   mounted() {
     document.body.style.overflow = 'hidden'
+  },
+  destroyed() {
+    document.body.style.overflow = 'auto'
   }
 }
 </script>

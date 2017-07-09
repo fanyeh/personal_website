@@ -14,7 +14,7 @@
         </div>
         <!-- Center image and console -->
         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
-          <p class="about-me__caption">I'm Jack</p>
+          <p class="about-me__caption">Hi , I'm Jack</p>
           <img class="img-fluid about-me__img" src="~images/about/about-me-img.png"></img>
           <p class="about-me__caption about-me__caption--sm ">sometimes I write codes</p>
           <div class=" about-me__console ">
