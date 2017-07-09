@@ -17,7 +17,7 @@ export default new Router({
     }
   },
   {
-    path: '#/portfolio/:projectName',
+    path: '/portfolio/:projectName',
     name: 'portfolio',
     component: PortfolioItem,
     props: true

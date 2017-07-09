@@ -11,9 +11,13 @@
       <div class="masonry__item" v-for="(project,index) in projects" :key="index">
         <p class="project-title">{{project}}</p>
         <hr>
-        <router-link :to="{name: 'portfolio' , params: {projectName:project}}">
+        <!--<router-link :to="{name: 'portfolio' , params: {projectName:project}}">
+              <img :src="projectImagePath(project)" width="100%"></img>
+            </router-link>-->
+  
+        <a :href="'/portfolio/'+ project">
           <img :src="projectImagePath(project)" width="100%"></img>
-        </router-link>
+        </a>
       </div>
     </div>
   
@@ -37,8 +41,8 @@
       </p>
     </div>
     <!--<transition name="fade">
-              <router-view></router-view>
-            </transition>-->
+                  <router-view></router-view>
+                </transition>-->
   </div>
 </template>
 
