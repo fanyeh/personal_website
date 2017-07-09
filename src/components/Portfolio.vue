@@ -71,6 +71,10 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
+.container {
+  font-family: 'Exo', sans-serif;
+}
+
 .separator {
   position: absolute;
   top: 0;
@@ -79,7 +83,7 @@ export default {
   font-size: 20px;
   background-color: white;
   padding: 0 30px;
-  margin-top: -16px;
+  margin-top: -15px;
 }
 
 .separator__link {

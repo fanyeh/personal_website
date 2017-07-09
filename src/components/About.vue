@@ -14,8 +14,8 @@
         </div>
         <!-- Center image and console -->
         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
-          <p class="about-me__caption ">I'm Jack</p>
-          <img class="img-fluid about-me__img" src="~images/about/about-me-img.svg"></img>
+          <p class="about-me__caption">I'm Jack</p>
+          <img class="img-fluid about-me__img" src="~images/about/about-me-img.png"></img>
           <p class="about-me__caption about-me__caption--sm ">sometimes I write codes</p>
           <div class=" about-me__console ">
             <!--<audio ref="audioElm " src="../../static/type.mp3 "></audio>-->
@@ -99,13 +99,18 @@ export default {
 <style scoped lang='scss'>
 .about-me {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 3%;
   margin-bottom: 5%;
+  font-family: 'Exo', sans-serif;
+}
+
+.about-me__caption {
+  font-weight: 700;
 }
 
 .about-me__img {
-  margin-top: 3%;
-  margin-bottom: 5%;
+  margin-top: 15%;
+  margin-bottom: 30%;
 }
 
 .about-me__left {
