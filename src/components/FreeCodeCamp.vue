@@ -6,17 +6,17 @@
         <p>freeCodeCamp</p>
       </a>
     </div>
-  
+
     <div class="masonry">
       <div class="masonry__item" v-for="(project,index) in projects" :key="index">
         <p class="project-title">{{project}}</p>
         <hr>
-        <router-link :to="{name: 'portfolio' , params: {projectName:project}}">
+        <router-link :to="{name: 'freecodecamp' , params: {projectName:project}}">
           <img :src="projectImagePath(project)" width="100%"></img>
         </router-link>
       </div>
     </div>
-  
+
     <div class="credit">
       <p>Projects are created by use of&nbsp
         <a href="https://vuejs.org" target="_blank">

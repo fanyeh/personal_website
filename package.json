@@ -12,8 +12,9 @@
     "deploy": "git subtree push --prefix dist heroku master"
   },
   "dependencies": {
-    "vue": "^2.3.3",
-    "vue-router": "^2.3.1"
+    "caniuse-lite": "^1.0.30000746",
+    "vue": "^2.5.2",
+    "vue-router": "^2.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
@@ -58,7 +59,7 @@
     "url-loader": "^0.5.8",
     "vue-loader": "^12.1.0",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.3.3",
+    "vue-template-compiler": "^2.5.2",
     "vuex": "^2.3.1",
     "webpack": "^2.6.1",
     "webpack-bundle-analyzer": "^2.2.1",

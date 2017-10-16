@@ -1,19 +1,22 @@
 <template>
   <div id="app" class="container-fluid">
     <router-view></router-view>
-    <router-view name="portfolio"></router-view>
+    <router-view name="freecodecamp"></router-view>
+    <cssItem></cssItem>
   </div>
 </template>
 
 <script>
 import About from 'components/About'
-import Portfolio from 'components/Portfolio'
+import FreeCodeCamp from 'components/FreeCodeCamp'
+import cssItem from 'css/CSSItem'
 
 export default {
   name: 'app',
   components: {
     About,
-    Portfolio
+    FreeCodeCamp,
+    cssItem
   }
 }
 </script>

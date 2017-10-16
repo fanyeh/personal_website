@@ -25,6 +25,7 @@ module.exports = {
       '@': resolve('src'),
       'components': resolve('src/components'),
       'freecodecamp': resolve('src/components/freecodecamp'),
+      'css': resolve('src/components/css'),
       'images': resolve('src/assets/images')
     }
   },

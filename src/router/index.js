@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import About from 'components/About'
-import Portfolio from 'components/Portfolio'
-import PortfolioItem from 'components/PortfolioItem'
+import FreeCodeCamp from 'components/FreeCodeCamp'
+import FreeCodeCampItem from 'components/FreeCodeCampItem'
 
 Vue.use(Router)
 
@@ -13,13 +13,13 @@ export default new Router({
     name: 'home',
     components: {
       default: About,
-      portfolio: Portfolio
+      freecodecamp: FreeCodeCamp
     }
   },
   {
-    path: '/portfolio/:projectName',
-    name: 'portfolio',
-    component: PortfolioItem,
+    path: '/freecodecamp/:projectName',
+    name: 'freecodecamp',
+    component: FreeCodeCampItem,
     props: true
   }]
 })

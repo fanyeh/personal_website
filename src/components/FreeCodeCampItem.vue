@@ -36,7 +36,7 @@ import Receipe from 'freecodecamp/Receipe'
 import GameOfLife from 'freecodecamp/GameOfLife'
 
 export default {
-  name: 'portfolio-item',
+  name: 'freeCodeCampItem',
   props: ['projectName'],
   data() {
     return {
@@ -68,7 +68,7 @@ export default {
       this.fetchContent()
     },
     fetchContent() {
-      this.$router.push({ name: 'portfolio', params: { projectName: this.projects[this.contentIndex] } })
+      this.$router.push({ name: 'freecodecamp', params: { projectName: this.projects[this.contentIndex] } })
     },
     closeSlider() {
       document.body.style.overflow = 'auto'
