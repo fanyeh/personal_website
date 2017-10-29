@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <h6 class="title">Dash Loader</h6>
+  <div class="mt4">
     <div class="container">
-      <div v-for="i in 4" class="bar">
-      </div>
+      <div v-for="i in 4" class="bar"></div>
     </div>
     <h6 class="credit">Inspired from
       <a href="https://dribbble.com/colder" target="_blank">Vitaly Silkin</a>'s

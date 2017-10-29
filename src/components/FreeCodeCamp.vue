@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
-    <hr>
+  <div class="container mt6">
+     <hr class=" b--black-30">
+    <div class="section f3 bg-white relative ph5 dib">FreeCodeCamp</div>
+    <!-- <hr>
     <div class="separator">
       <a class="separator__link" href="https://www.freecodecamp.com" taget="_blank">
         <p>freeCodeCamp</p>
       </a>
-    </div>
+    </div> -->
 
     <div class="masonry">
       <div class="masonry__item" v-for="(project,index) in projects" :key="index">
@@ -17,7 +19,7 @@
       </div>
     </div>
 
-    <div class="credit">
+    <!-- <div class="credit">
       <p>Projects are created by use of&nbsp
         <a href="https://vuejs.org" target="_blank">
           <span style="color:#3bb981">Vue.js</span>
@@ -35,7 +37,7 @@
           <span style="color:rgb(92,68,129)">Bootstrap</span>
         </a>
       </p>
-    </div>
+    </div> -->
     <router-view></router-view>
   </div>
 </template>
@@ -134,5 +136,11 @@ hr {
     -webkit-column-count: 4;
     column-count: 4;
   }
+}
+
+.section {
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>

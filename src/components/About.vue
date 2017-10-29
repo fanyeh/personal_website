@@ -14,7 +14,7 @@
         </div>
         <!-- Center image and console -->
         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-2">
-          <p class="about-me__caption">Hi , I'm Jack</p>
+          <p class="about-me__caption">Hi , I'm <span class="initial">J</span>ack</p>
           <img class="img-fluid about-me__img" src="~images/about/about-me-img.png"></img>
           <p class="about-me__caption about-me__caption--sm ">sometimes I write codes</p>
           <div class=" about-me__console ">
@@ -310,6 +310,25 @@ p.about-me__console--msg--error {
     p {
       font-size: 0.8em;
     }
+  }
+}
+
+.initial {
+  padding-left:20px;
+  padding-right:15px;
+  position:relative;
+  font-size:58px;
+  color:white;
+  &:before {
+    content:"";
+    position:absolute;
+    width:55px;
+    height: 55px;
+    background-color:black;
+    border-radius:50%;
+    z-index:-1;
+    left:0px;
+    top:15px;
   }
 }
 </style>

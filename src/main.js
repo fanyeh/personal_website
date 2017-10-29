@@ -6,6 +6,7 @@ import router from './router'
 import { store } from './store/store'
 // import './assets/styles/normalize.css'
 import './assets/styles/bootstrap/css/bootstrap.css'
+import 'tachyons'
 
 Vue.config.productionTip = false
 

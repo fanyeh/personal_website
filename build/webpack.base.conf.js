@@ -25,8 +25,10 @@ module.exports = {
       '@': resolve('src'),
       'components': resolve('src/components'),
       'freecodecamp': resolve('src/components/freecodecamp'),
-      'css': resolve('src/components/css'),
-      'images': resolve('src/assets/images')
+      'pureCSS': resolve('src/components/pureCSS'),
+      'vueProject': resolve('src/components/vueProject'),
+      'images': resolve('src/assets/images'),
+      'json': resolve('src/assets/json')
     }
   },
   module: {

@@ -94,6 +94,7 @@ export default {
   left: 0;
   background-color: white;
   text-align: center;
+  z-index: 999;
 }
 
 .close-btn {

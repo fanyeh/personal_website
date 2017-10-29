@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h6 class="title">Bird Loader</h6>
+  <div class="mt4">
     <div class='container'>
       <div class='loader tongue'></div>
       <div class='loader hair'></div>
@@ -43,14 +42,6 @@ export default {
 }
 
 $duration: 3s;
-
-
-.title {
-  text-align: center;
-  margin-top: -65px;
-  margin-bottom: 30px;
-  font-size: 14px;
-}
 
 .credit {
   text-align: center;

@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <h6 class="title">Double Helix Loader</h6>
+  <div class="mt4">
     <div class="container">
-
       <div v-for="i in 20" class="circle"></div>
-
     </div>
     <h6 class="credit">Inspired from
       <a href="https://dribbble.com/drewendly" target="_blank">Drew Endly</a>'s
