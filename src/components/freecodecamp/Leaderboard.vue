@@ -1,46 +1,39 @@
-<template>
-  <div id="leader-board">
-    <div v-if="loading" class="loading">
-      <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
-      <span class="sr-only">Loading...</span>
-    </div>
-  
-    <table v-else>
-      <thead>
-        <tr>
-          <th colspan="4">Camper Leaderboard</th>
-        </tr>
-        <tr>
-          <th>#</th>
-          <th>Camper Name</th>
-          <th @click="sortRecentPoints">Points in past 30 days
-            <i class="fa fa-sort" aria-hidden="true"></i>
-          </th>
-          <th @click="sortAlltimePoints">All time points
-            <i class="fa fa-sort" aria-hidden="true"></i>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(camper , index) in tableData" :key="index">
-          <td>{{tableIndex + index + 1}}</td>
-          <td>{{camper.username}}</td>
-          <td>{{camper.recent}}</td>
-          <td>{{camper.alltime}}</td>
-        </tr>
-      </tbody>
-    </table>
-  
-    <div class="page-btns">
-      <button v-for="n in pageIndexes()" class="btn btn-sm" @click="fetchTableData(n)" :class="buttonControl[n] ? 'selected' : ''">{{n}}</button>
-    </div>
-  </div>
+<template lang="pug">
+  #leaderBoard(class="relative v-center")
+    //- Loader
+    div(v-if="loading" class="absolute abs-center")
+      i(class="fa fa-spinner fa-pulse fa-2x fa-fw")
+      span(class="sr-only") Loading...
+    //- Table
+    table(v-else class="collapse f6 f5-ns tc center w-100")
+      thead
+        tr(class="bg-green f4-ns")
+          th(colspan="4") FreeCodeCamp Leaderboard
+        tr(class="bg-green")
+          th #
+          th Camper Name
+          th(@click="sortRecentPoints") Points in past 30 days
+            i(class="fa fa-sort pl2" aria-hidden="true")
+          th(@click="sortAlltimePoints") All time points
+            i(class="fa fa-sort pl2" aria-hidden="true")
+      tbody
+        tr(v-for="(camper , index) in tableData" :key="index")
+         td {{tableIndex + index + 1}}
+         td {{camper.username}}
+         td {{camper.recent}}
+         td {{camper.alltime}}
+    //- Page Control
+    pagination(v-if="!loading" :dataCount="campers.length" :visibleRows="dataPerPage" v-on:fetchPage="fetchTableData")
 </template>
 
 <script>
 import axios from 'axios'
+import pagination from 'components/Pagination'
 export default {
   name: 'app',
+  components: {
+    pagination
+  },
   data() {
     return {
       campers: [],
@@ -49,7 +42,7 @@ export default {
       loading: true,
       tableData: [],
       tableIndex: 0,
-      dataPerPage: 15,
+      dataPerPage: 20,
       buttonControl: {},
       selectedButton: 1
     }
@@ -79,8 +72,10 @@ export default {
     }
   },
   created() {
-    if (window.innerWidth < 414) {
+    if (screen.width < 360) {
       this.dataPerPage = 10
+    } else if (screen.width < 768) {
+      this.dataPerPage = 14
     }
   },
   mounted() {
@@ -101,11 +96,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-table {
-  border-collapse: collapse;
-  margin: auto;
-  text-align: center;
-  width: 100%;
+#leaderBoard {
+  font-family: "Roboto";
 }
 
 tbody>tr>td,
@@ -115,51 +107,12 @@ thead>tr>th {
   height: 35px;
 }
 
-thead>tr>th {
-  background-color: #42b883;
-  text-align: center;
-}
-
-.loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
 
-.page-btns {
-  text-align: right;
-  width: 100%;
-  margin: 20px auto;
-  .btn {
-    margin: 0 1px;
-    width: 32px;
-    background-color: #42b883;
-    color: white;
-  }
-
-  .btn.selected {
-    color: black;
-    text-decoration: underline;
-  }
+button.selected {
+  color: black;
 }
 
-@media (max-width:576px) {
-  .page-btns {
-    text-align: center;
-    width: 100%;
-    margin: 5px auto;
-    .btn {
-      margin: 0 1px;
-      width: 26px;
-      background-color: #42b883;
-      color: white;
-      font-size: 13px;
-    }
-  }
-}
 </style>

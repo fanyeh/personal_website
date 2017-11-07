@@ -1,31 +1,25 @@
-<template>
-  <div class="control">
-    <label id="gameLabel">Simon</label>
-    <div id="scoreBoard">
-      <label id="score" :class="blinkScore ? 'blink' :''">{{formatScore}}</label>
-    </div>
-    <div id="startBtn" @click="startGame"></div>
-    <div id="strictBtn" @click="turnStrictMode"></div>
-    <div id="count" class="label">Count</div>
-    <div id="start" class="label">Start</div>
-    <div id="strict" class="label">Strict</div>
-    <div id="strictLight">
-      <div v-if="strictMode " id="light"></div>
-    </div>
-    <switch-control></switch-control>
-    <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" ref="b1"></audio>
-    <audio src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" ref="b2"></audio>
-    <audio src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" ref="b3"></audio>
-    <audio src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" ref="b4"></audio>
-  </div>
+<template lang="pug">
+  .control
+    label(class="f1 fw5 black-60 dib mt4") Simon
+    #scoreBoard
+      label(class="white f3 lh-title" :class="blinkScore ? 'blink' :''") {{formatScore}}
+    #startBtn(@click="startGame")
+    #strictBtn(@click="turnStrictMode")
+    #count(class="label") Count
+    #start(class="label") Start
+    #strict(class="label") Strict
+    #strictLight
+      #light(v-if="strictMode")
+    switch-control
+    audio(src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" ref="b1")
+    audio(src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" ref="b2")
+    audio(src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" ref="b3")
+    audio(src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" ref="b4")
 </template>
 
 <script>
-
-/* If required */
 import SwitchControl from './SwitchControl'
 import { eventBus } from '../../../main.js'
-
 export default {
   name: 'controller',
   data() {
@@ -181,6 +175,7 @@ export default {
   @include componentPos($border/3/2, $border/3/2, '');
   background-color: white;
   border-radius: 50%;
+  font-family: 'Exo', sans-serif;
 }
 
 #switch-control {
@@ -199,29 +194,14 @@ export default {
   @include btn(yellow);
 }
 
-label#gameLabel {
-  @include componentPos(27px, 22px, '');
-  font-size: 50px;
-  font-weight: 900;
-  position: absolute;
-  color: #535353;
-}
-
 #scoreBoard {
-  @include componentSize(absolute, $blockSize/7.2, $blockSize/14);
-  @include componentPos(($blockSize/2-$border/3 - $blockSize/15)/2+5, 23px, '');
+  @include componentSize(absolute, $blockSize/9.2, $blockSize/14);
+  @include componentPos(($blockSize/2-$border/3 - $blockSize/16)/2+5, 30px, '');
   background-color: yellow;
   border-radius: 15%;
   border: 3px solid $borderColor;
   background-color: $borderColor;
   text-align: center;
-}
-
-label#score {
-  font-size: 30px;
-  font-family: 'Orbitron';
-  color: white;
-  margin-top: -8px;
 }
 
 @keyframes fade {
@@ -239,15 +219,15 @@ label#score {
   }
 }
 
-label#score.blink {
+.blink {
   animation: fade 0.1s, blink 0.8s step-start infinite;
 }
 
 .label {
   position: absolute;
-  font-size: 10px;
-  font-weight: 600;
-  top: 133px;
+  font-size: 0.5em;
+  font-weight: 900;
+  top: 130px;
 }
 
 div#count {
@@ -255,16 +235,16 @@ div#count {
 }
 
 div#start {
-  left: 109px;
+  left: 105px;
 }
 
 div#strict {
-  left: 156px;
+  left: 153px;
 }
 
 div#strictLight {
   @include componentSize(absolute, 10px, 10px);
-  @include componentPos(($blockSize/2-$border/3 - $blockSize/15)/2-1, ($blockSize/2-$border/3 - $blockSize/15)/2+79, '');
+  @include componentPos(($blockSize/2-$border/3 - $blockSize/15)/2-1, ($blockSize/2-$border/3 - $blockSize/15)/2+75, '');
   border-radius: 50%;
   background-color: $borderColor;
 }

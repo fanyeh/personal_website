@@ -1,6 +1,6 @@
 <template>
   <div class="wiki">
-    <div :class="moveSearchBar ? 'on-search':''">
+    <div class="mt4" :class="moveSearchBar ? 'on-search':''">
       <input class="wiki__search-input" type="search" v-on:keyup.enter="getWiki" v-model="searchTxt" placeholder="Enter search text"></input>
       <p class="wiki__random">
         <a href="https://en.wikipedia.org/wiki/Special:Random " target="_blank ">Random</a>

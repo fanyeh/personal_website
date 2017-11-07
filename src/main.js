@@ -4,12 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import { store } from './store/store'
-// import './assets/styles/normalize.css'
-import './assets/styles/bootstrap/css/bootstrap.css'
+import './assets/styles/font-awesome.css'
+import './assets/styles/utility.scss'
 import 'tachyons'
-
 Vue.config.productionTip = false
-
 export const eventBus = new Vue()
 
 /* eslint-disable no-new */

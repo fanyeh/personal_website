@@ -1,12 +1,9 @@
-<template>
-  <div class="container mt4">
-    <div class='loader' ref="loader"></div>
-    <controller v-on:loopLeft='loopLeft' v-on:loopRight='loopRight' v-if="visible">
-      <slide v-for="(key , index) in visibleImageIndex" :key='index'>
-        <img class='carousel-img' :src='imgSource[key]'>
-      </slide>
-    </controller>
-  </div>
+<template lang="pug">
+  #carousel(class="tc relative container")
+    div(class='loader' ref="loader")
+    controller(v-on:loopLeft='loopLeft' v-on:loopRight='loopRight' v-if="visible")
+      slide(v-for="(key , index) in visibleImageIndex" :key='index')
+        img(class='v-center relative' :src='imgSource[key]')
 </template>
 
 <script>
@@ -117,44 +114,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-// :root {
-//   background-color: #222831;
-//   text-align: center;
-// }
 .container {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  position: relative;
-  color: white; // width: 100%;
-  //margin-top: 50px; // height: 100%;
-  height: 350px; // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-}
-
-img {
-  width: 100%;
-  position: absolute;
-  margin: auto;
-  border: 4px solid white;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backface-visibility: hidden;
-}
-
-.loader {
-  // position: fixed;
-  // width: 100vw;
-  // height: 100vh;
-  // background-color: #222831;
-  // top: 0;
-  // left: 0;
-  // z-index: 999;
-  // transition: all 3s;
+  height: 550px; 
 }
 
 .loader-fade {

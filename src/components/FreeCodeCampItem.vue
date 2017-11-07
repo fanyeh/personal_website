@@ -1,61 +1,44 @@
-<template>
-  <div class="container">
-    <div class="close-btn">
-      <i class="fa fa-times-circle fa-2x" aria-hidden="true" @click="closeSlider" cp></i>
-    </div>
-    <div class="row slide">
-      <div class="hidden-sm-down col-md-1">
-        <i class="fa fa-chevron-left fa-2x slide-ctrl__btn" aria-hidden="true" @click="prevContent"></i>
-      </div>
-      <div class="col-md-10">
-        <div class="slide-content">
-          <component :is="$route.params.projectName"></component>
-        </div>
-      </div>
-      <div class="hidden-sm-down col-md-1">
-        <i class="fa fa-chevron-right fa-2x slide-ctrl__btn" aria-hidden="true" @click="nextContent"></i>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+transition(name="close")
+  div(class="fixed h-100 w-100 bg-white tc top-0 left-0 relative z-999" ref="portfolio")
+    div(class="absolute right-1 top-1")
+      i(class="fa fa-times-circle fa-2x f3 f2-ns" aria-hidden="true" @click="closeSlider")
+    div(class="w-100 fl ")
+      div(class="w-10 fl vh-100")
+        i(class="fa fa-chevron-left fa-2x relative v-center f2-ns f4"  @click="prevContent")
+      div(class="w-80 fl vh-100")
+        transition(name="slide-fade")
+          component(:is="$route.params.projectName")
+      div(class="w-10 fl vh-100")
+        i(class="fa fa-chevron-right fa-2x f2-ns f4 relative v-center" @click="nextContent")
 </template>
 
 <script>
-
-/* If required */
 import Quote from 'freecodecamp/Quote'
 import Clock from 'freecodecamp/Clock'
-import Weather from 'freecodecamp/Weather'
-import Wiki from 'freecodecamp/Wiki/Wiki'
-import Twitch from 'freecodecamp/Twitch'
 import Calculator from 'freecodecamp/Calculator'
 import TicTacToe from 'freecodecamp/TicTacToe'
 import Simmon from 'freecodecamp/Simmon/Simmon'
 import Markdown from 'freecodecamp/Markdown'
 import Leaderboard from 'freecodecamp/Leaderboard'
-import Receipe from 'freecodecamp/Receipe'
 import GameOfLife from 'freecodecamp/GameOfLife'
 
 export default {
   name: 'freeCodeCampItem',
-  props: ['projectName'],
   data() {
     return {
       contentIndex: 0,
-      projects: ['quote', 'weather', 'wiki', 'twitch', 'calculator', 'clock', 'ticTacToe', 'simmon', 'markdown', 'leaderboard', 'receipe', 'gameOfLife']
+      projects: ['quote', 'calculator', 'clock', 'ticTacToe', 'simmon', 'markdown', 'leaderboard', 'gameOfLife']
     }
   },
   components: {
     quote: Quote,
     clock: Clock,
-    weather: Weather,
-    wiki: Wiki,
-    twitch: Twitch,
     calculator: Calculator,
     ticTacToe: TicTacToe,
     simmon: Simmon,
     markdown: Markdown,
     leaderboard: Leaderboard,
-    receipe: Receipe,
     gameOfLife: GameOfLife
   },
   methods: {
@@ -68,51 +51,36 @@ export default {
       this.fetchContent()
     },
     fetchContent() {
-      this.$router.push({ name: 'freecodecamp', params: { projectName: this.projects[this.contentIndex] } })
+      let currentProject = this.projects[this.contentIndex]
+      this.$router.push({ name: 'freecodecamp', params: { projectName: currentProject } })
     },
     closeSlider() {
-      document.body.style.overflow = 'auto'
+      this.$refs.portfolio.style.transformOrigin = 'top right'
       this.$router.push({ name: 'home' })
     }
-  },
-  mounted() {
-    document.body.style.overflow = 'hidden'
-  },
-  destroyed() {
-    document.body.style.overflow = 'auto'
   }
 }
 </script>
 
-<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
-.container {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: white;
-  text-align: center;
-  z-index: 999;
+.close-enter-active, .close-leave-active {
+  transition: all 0.4s ease-out;
+}
+.close-enter, .close-leave-to {
+  transform: scale(0);
+}
+.close-enter-to, .close-leave {
+  transform: scale(1);
 }
 
-.close-btn {
-  text-align: right;
-  padding-top: 10px;
+.slide-fade-enter-active {
+  transition: all .7s ease;
 }
-
-.slide {
-  height: 90%;
+.slide-fade-leave-active {
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-
-.slide-content {
-  height: 100%;
-}
-
-.slide-ctrl__btn {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); // border: 1px solid;
+.slide-fade-leave-to , .slide-fade-enter
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

@@ -1,17 +1,12 @@
-<template>
-  <div id="switch-control">
-    <div v-bind:class="[isOff ? 'isOn' : 'isOff' , 'label']">OFF</div>
-    <div id="switch-container" v-on:click="switchOn">
-      <div v-bind:class="[isOff ? 'turnOff' : 'turnOn']" id="switch-button"></div>
-    </div>
-    <div v-bind:class="[isOff ? 'isOff' : 'isOn' , 'label']">ON
-    </div>
-  </div>
+<template lang="pug">
+  div(class="absolute bottom-1 overflow-hidden dib h-center")
+    div(v-bind:class="[isOff ? 'isOn' : 'isOff' , 'label']" class="dib fl f7 pa1 fw7") OFF
+    div(v-on:click="switchOn" class="w2 bg-black fl br2 overflow-hidden")
+      div(v-bind:class="[isOff ? 'turnOff' : 'turnOn']" class="relative w1 h1 fl bg-silver")
+    div(v-bind:class="[isOff ? 'isOff' : 'isOn' , 'label']" class="dib fl f7 pa1 fw7") ON
 </template>
-<script>
 
-/* If required */
-/* import otherComponent from './components/OtherComponent' */
+<script>
 import { eventBus } from '../../../main.js'
 export default {
   name: 'switch-control',
@@ -29,45 +24,8 @@ export default {
 }
 </script>
 
-<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
-$height: 20px;
 $color: #282828;
-
-div#switch-control {
-  display: table-cell;
-  position: absolute;
-  width: 130px;
-  height: $height; // border: solid 1px black;
-}
-
-div#switch-container {
-  display: inline-block;
-  width: 60px;
-  height: $height;
-  background-color: $color;
-  border-radius: 5px;
-}
-
-div#switch-button {
-  position: absolute;
-  width: 28px;
-  height: 14px;
-  background-color: #0c56ff;
-  border-radius: 4px;
-  top: 3px; // left: 37px;
-}
-
-div.label {
-  font-size: 10px;
-  font-weight: 900;
-  display: inline-block;
-  width: 30px;
-  height: $height;
-  top: 30%;
-  transform: translateY(-30%);
-}
-
 .isOff {
   color: $color;
   transition: .3s
@@ -79,12 +37,12 @@ div.label {
 }
 
 .turnOn {
-  left: 64px;
+  transform:translateX(16px);
   transition: .3s ease-in-out;
 }
 
 .turnOff {
-  left: 38px;
+  transform:translateX(0px);
   transition: .3s ease-in-out;
 }
 </style>

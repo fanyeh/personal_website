@@ -1,117 +1,61 @@
-<template>
-  <div class="container mt6">
-     <hr class=" b--black-30">
-    <div class="section f3 bg-white relative ph5 dib">FreeCodeCamp</div>
-    <!-- <hr>
-    <div class="separator">
-      <a class="separator__link" href="https://www.freecodecamp.com" taget="_blank">
-        <p>freeCodeCamp</p>
-      </a>
-    </div> -->
-
-    <div class="masonry">
-      <div class="masonry__item" v-for="(project,index) in projects" :key="index">
-        <p class="project-title">{{project}}</p>
-        <hr>
-        <router-link :to="{name: 'freecodecamp' , params: {projectName:project}}">
-          <img :src="projectImagePath(project)" width="100%"></img>
-        </router-link>
-      </div>
-    </div>
-
-    <!-- <div class="credit">
-      <p>Projects are created by use of&nbsp
-        <a href="https://vuejs.org" target="_blank">
-          <span style="color:#3bb981">Vue.js</span>
-        </a> /
-        <a href="https://openweathermap.org/" target="_blank">
-          <span style="color:#ff8c00">OpenWeatherMap</span>
-        </a> /
-        <a href="https://erikflowers.github.io/weather-icons/" target="_blank">
-          <span style="color:#934aa5">Weather Icons</span>
-        </a> /
-        <a href="http://fontawesome.io" target="_blank">
-          <span style="color:rgb(38,158,118)">Font Awesome</span>
-        </a> /
-        <a href="http://getbootstrap.com/" target="_blank">
-          <span style="color:rgb(92,68,129)">Bootstrap</span>
-        </a>
-      </p>
-    </div> -->
-    <router-view></router-view>
-  </div>
+<template lang="pug">
+  #freecodecamp(class="w-80 center" ref='fcc')
+    hr
+    a(class="top--2-ns top-c h-center f2-ns f3 bg-white relative ph5-ns ph4 dib link mb5 black" href="https://www.freecodecamp.com" target="_blank") FreeCodeCamp
+      
+    .masonry
+      .masonry__item(v-for="(project,index) in projects" :key="index")
+        router-link(:to="{name: 'freecodecamp' , params: {projectName:project}}"  class='link mid-gray')
+          p(class="tc f4-ns f6 f1 mt2 mb1 ") {{projectNames[index]}}
+          hr(class="mh3 bt b--light-gray")
+          div(class="relative h-75")
+            img(:src="projectImagePath(project)" class="db center")
 </template>
 
 <script>
+
 export default {
   name: 'freecodecamp',
   data() {
     return {
-      projects: ['quote', 'weather', 'wiki', 'twitch', 'calculator', 'clock', 'ticTacToe', 'simmon', 'markdown', 'leaderboard', 'receipe', 'gameOfLife']
+      projects: ['quote', 'calculator', 'clock', 'ticTacToe', 'simmon', 'markdown', 'gameOfLife', 'leaderboard'],
+      projectNames: ['Quote Machine', 'Calculator', 'Pomodoro Clock', 'TicTacToe', 'Simmon Game', 'Markdown Viewer', 'Game of Life', 'Leaderboard']
     }
   },
   methods: {
     projectImagePath(project) {
       return require('../assets/images/freecodecamp/' + project + '.png')
     }
+  },
+  mounted () {
+    document.body.style.overflow = 'auto'
+  },
+  destroyed() {
+    document.body.style.overflow = 'hidden'
   }
 }
 </script>
 
-<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
-.container {
-  font-family: 'Exo', sans-serif;
-}
-
-.separator {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 20px;
-  background-color: white;
-  padding: 0 30px;
-  margin-top: -15px;
-}
-
-.separator__link {
-  text-decoration: none;
-  color: #303030;
-}
-
-.project-title {
-  text-align: center;
-  margin: 5px 0;
-  font-weight: 100;
-}
-
-hr {
-  margin: 0 10px;
-}
-
-.credit {
-  text-align: center;
-  font-size: 14px;
-  clear: both;
-  margin-top: 40px;
-}
-
 .masonry {
+  width:90%;
   -moz-column-count: 1;
   -webkit-column-count: 1;
   column-count: 1;
-  column-gap: 0.9em;
-  margin-top: 50px;
+  column-gap: 0.8em;
+  margin:0 5%;
 }
 
 .masonry__item {
   display: inline-block;
   margin: 0 0 1em;
   width: 100%;
+  height:400px;
   border: 1px solid #eee;
   cursor: pointer;
   box-shadow: 2px 2px 4px #eee;
+  border-radius:3%;
+  overflow:hidden;
 }
 
 @media only screen and (min-width: 768px) {
@@ -138,9 +82,15 @@ hr {
   }
 }
 
-.section {
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
+img {
+  position:relative;
+  max-height:350px;
+}
+
+.link {
+  text-decoration: none;
+  &:visited {
+    color:black;
+  }
 }
 </style>

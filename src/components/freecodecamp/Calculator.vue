@@ -1,43 +1,33 @@
-<template>
-  <div class="calculator">
-    <table>
-      <tr>
-        <td class="calculator__equation" colspan="4">{{equationString}}</td>
-      </tr>
-      <tr>
-        <td class="calculator__screen" colspan="4">{{screen}}</td>
-      </tr>
-      <tr>
-        <td @click="calculate(1)">1</td>
-        <td @click="calculate(2)">2</td>
-        <td @click="calculate(3)">3</td>
-        <td class="calculator__operator" @click="calculate('+')">+</td>
-      </tr>
-      <tr>
-        <td @click="calculate(4)">4</td>
-        <td @click="calculate(5)">5</td>
-        <td @click="calculate(6)">6</td>
-        <td class="calculator__operator" @click="calculate('-')">-</td>
-      </tr>
-      <tr>
-        <td @click="calculate(7)">7</td>
-        <td @click="calculate(8)">8</td>
-        <td @click="calculate(9)">9</td>
-        <td class="calculator__operator" @click="calculate('x')">x</td>
-      </tr>
-      <tr>
-        <td class="calculator__clear" @click="calculate('C')">C</td>
-        <td @click="calculate(0)">0</td>
-        <td class="calculator__operator" @click="calculate('=')">=</td>
-        <td class="calculator__operator" @click="calculate('÷')">÷</td>
-      </tr>
-    </table>
-  
-    <div class="calculator__footer">
-      <a href="https://dribbble.com/shots/2311064-Calculator" target="_blank">Inspired by Oleg Frolov@dribbble</a>
-    </div>
-  
-  </div>
+<template lang="pug">
+  #calculator(class="absolute abs-center dib")
+    table
+      tr
+        td(class="calculator__equation" colspan="4") {{equationString}}
+      tr
+        td(class="calculator__screen" colspan="4") {{screen}}
+      tr
+        td(@click="calculate(1)") 1
+        td(@click="calculate(2)") 2
+        td(@click="calculate(3)") 3
+        td(class="calculator__operator" @click="calculate('+')") +
+      tr
+        td(@click="calculate(4)") 4
+        td(@click="calculate(5)") 5
+        td(@click="calculate(6)") 6
+        td(class="calculator__operator" @click="calculate('-')") -
+      tr
+        td(@click="calculate(7)") 7
+        td(@click="calculate(8)") 8
+        td(@click="calculate(9)") 9
+        td(class="calculator__operator" @click="calculate('x')") x
+      tr
+        td(class="calculator__clear" @click="calculate('C')") C
+        td(@click="calculate(0)") 0
+        td(class="calculator__operator" @click="calculate('=')") =
+        td(class="calculator__operator" @click="calculate('÷')") ÷
+    div(class="credit f5-ns f6 mt5")
+      span(class="mr2") Inspired by
+      a(href="https://dribbble.com/shots/2311064-Calculator" target="_blank" class="silver") Oleg Frolov's Calculator @ dribbble
 </template>
 
 <script>
@@ -100,15 +90,6 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped style="scss">
-.calculator {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-block;
-}
-
 table {
   margin: auto;
   clip-path: inset(5px round 10px);
@@ -138,15 +119,6 @@ table {
 
 .calculator__clear {
   color: #dc6053;
-}
-
-.calculator__footer {
-  margin-top: 30px;
-  text-align: center;
-}
-
-a {
-  color: #374352;
 }
 
 table>tr>td:not(.calculator__screen):not(.calculator__equation) {

@@ -1,0 +1,30 @@
+.h-center {
+  left: 50%;
+  transform:translateX(-50%);
+}
+
+.v-center {
+  top: 50%;
+  transform:translateY(-50%);
+}
+
+.top-c {
+  top:-1em;
+}
+
+.abs-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.credit {
+  font-family:'Roboto';
+  a,a:visited {
+    color:#999;
+  }
+}
+
+.br-circle {
+  border-radius:50%;
+}

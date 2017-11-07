@@ -1,25 +1,19 @@
-<template>
-  <div class="container mt5">
-    <hr class=" b--black-30">
-    <div class="section f3 bg-white relative ph5 dib">Vue.js</div>
+<template lang="pug">
+  div(class="mt6-ns mt5 w-80 center")
+    hr
+    div(class="top--2-ns top-c h-center f2-ns f3 bg-white relative ph5-ns ph4 dib") Vue.js
 
-    <div class="separator">
-      <hr class="bt b--black-30 mh7">
-      <div class="separator-mark">Infinite Carousel</div>
-    </div>
-    <carousel></carousel>
+    div
+      div(class="h-center mt5-ns dib relative black-80 f4-ns f5") [ Infinite Carousel ]
+    carousel
 
-    <div class="separator mt6">
-      <hr class="bt b--black-30 mh7">
-      <div class="separator-mark">Datatable</div>
-    </div>
-    <datatable></datatable>
+    div
+      div(class="h-center mt5-ns mb4 mt1 dib relative black-80 f4-ns f5") [ Datatable ]
+    datatable
 
-    <div class="separator mt6">
-      <hr class="bt b--black-30 mh7">
-      <div class="separator-mark">Pieces</div>
-    </div>
-    <piece></piece>
+    div
+      div(class="h-center mt6-ns mb4 mt5 dib relative black-80 f4-ns f5") [ Pieces ]
+    piece
 
   </div>
 </template>
@@ -34,42 +28,6 @@ export default {
     Carousel,
     Piece,
     Datatable
-  },
-  data() {
-    return {}
   }
 }
 </script>
-
-<style scoped lang="scss">
-.container {
-  font-family: 'Exo', sans-serif;
-}
-
-.section {
-  top: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.separator {
-  .separator-mark {
-    display:inline-block;
-    position:relative;
-    // width:42px;
-    // height: 8px;
-    /* border-radius:50%; */
-    border:1px solid rgba(0,0,0,.3);
-    left: 50%;
-    transform:translateX(-50%);
-    top:-30px;
-    background-color:white;
-    padding:0 10px;
-  }
-  hr {
-    margin-left:440px;
-    margin-right:440px;
-  }
-}
-
-</style>

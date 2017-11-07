@@ -1,5 +1,5 @@
 <template lang='pug'>
-  div#stockChart
+  #stockChart
     i#closeButton(class="fa fa-times-circle fa-2x fr mr2 mt2 white" aria-hidden="true" @click="closeChart")
     i#loader(v-if="isLoading" :class="[{'rotate':isLoading},'fa','fa-spinner','fa-3x' ,'white' ]" aria-hidden="true")
     div(v-else id="chart")
@@ -85,7 +85,8 @@ export default {
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index:999;
 }
 
 #chart {

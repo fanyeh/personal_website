@@ -1,14 +1,9 @@
-<template>
-  <div class="block" :id="id" :class="classObject" @click="setPlayerStep">
-  </div>
+<template lang="pug">
+  .block(:id="id" :class="classObject" @click="setPlayerStep")
 </template>
 
 <script>
-
-/* If required */
-/* import otherComponent from './components/OtherComponent' */
 import { eventBus } from '../../../main.js'
-
 export default {
   props: ['position'],
   name: 'color-block',

@@ -1,36 +1,27 @@
-<template>
-  <div class="clock">
-    <!-- Setting -->
-    <div class="row">
-      <div class="col-sm-6 clock__setting clock__setting--break">
-        <p class="clock__setting-type">Break Length</p>
-        <i class="fa fa-minus" aria-hidden="true" @click="reduceBreakMinute"></i>
-        <span class='clock__setting-time'>{{breakTime}}</span>
-        <i class="fa fa-plus" aria-hidden="true" @click="increaseBreakMinute"></i>
-      </div>
-      <div class="col-sm-6 clock__setting clock__setting--work">
-        <p class="clock__setting-type">Session Length</p>
-        <i class="fa fa-minus" aria-hidden="true" @click="reduceWorkMinute"></i>
-        <span class='clock__setting-time'>{{workTime}}</span>
-        <i class="fa fa-plus" aria-hidden="true" @click="increaseWorkMinute"></i>
-      </div>
-    </div>
-    <!--Counter -->
-    <div class="clock__counter" :class="workMode ? '' : 'break'">
-      <div class="clock__counter--border">
-        <div ref="funnel" class="clock__counter--funnel" :class="funnelAnimation"></div>
-      </div>
-      <div class="clock__counter--count" v-on:click="startWorkTimer">{{formatedMinute}}:{{formatedSecond}}</div>
-    </div>
-  
-    <div class='clock__reset-btn' @click="loadDefault">Reset</div>
-  
-  </div>
+<template lang="pug">
+  #clock(class="relative v-center")
+    //- Setting
+    div(class="overflow-hidden center dib f3-ns f5")
+      div(class="fl mh4-ns mh2 dark-red")
+        p Break Length
+        i(class="fa fa-minus f4-ns f5" aria-hidden="true" @click="reduceBreakMinute")
+        span(class="mh3") {{breakTime}}
+        i(class="fa fa-plus f4-ns f5" aria-hidden="true" @click="increaseBreakMinute")
+      div(class="fl mh4-ns mh2 green")
+        p Work Length
+        i(class="fa fa-minus f4-ns f5 " aria-hidden="true" @click="reduceWorkMinute")
+        span(class="mh3") {{workTime}}
+        i(class="fa fa-plus f4-ns f5" aria-hidden="true" @click="increaseWorkMinute")
+    //- Counter
+    div(class="clock__counter relative pointer" :class="workMode ? '' : 'break'")
+      div(class="clock__counter--border")
+        div(ref="funnel" class="clock__counter--funnel" :class="funnelAnimation")
+      div(class="black-50 relative dib center f-subheadline fw7 v-center" v-on:click="startWorkTimer") {{formatedMinute}}:{{formatedSecond}}
+    //- Reset
+    div(class='f4-ns f5 dib ph3 pv1 br-pill white bg-black-50' @click="loadDefault") Reset
 </template>
 
 <script>
-
-/* If required */
 export default {
   name: 'clock',
   data() {
@@ -144,114 +135,39 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-$vue-color: #42b883;
-$airbnb-color: #fd5c63;
+$workColor:#19A974;
+$breakColor:#E7040F;
+$clockSize: 300px;
+$borderSize:16px;
 
-@mixin click-animation() {
-  transition: all .09s linear;
-  transform: scale(0.85);
-}
-
-.clock {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: auto;
-  width: 70%;
-}
-
-// Setting
-.clock__setting {
-  padding: 20px;
-  .clock__setting-type {
-    font-size: 20px;
-    font-weight: 500;
-  }
-  .clock__setting-time {
-    font-weight: 500;
-    font-size: 20px;
-    padding: 0 10px;
-  }
-  .fa-plus,
-  .fa-minus {
-    border: 2px solid;
-    padding: 8px;
-    border-radius: 50%;
-  }
-  .fa-plus:hover,
-  .fa-minus:hover {
-    color: white;
-  }
-
-  .fa-plus:active,
-  .fa-minus:active {
-    @include click-animation();
-  }
-}
-
-.clock__setting--break {
-  color: $airbnb-color;
-  .fa-plus:hover,
-  .fa-minus:hover {
-    background-color: $airbnb-color;
-  }
-}
-
-.clock__setting--work {
-  color: $vue-color;
-  .fa-plus:hover,
-  .fa-minus:hover {
-    background-color: $vue-color;
-  }
-}
-
-// IPhone 5
-@media (max-width: 320px) {
-  .clock__setting {
-    .clock__setting-type,
-    .clock__setting-time {
-      font-size: 0.9em;
-      font-weight: 300;
-    }
-  }
+.f-subheadline{
+  font-size:5.5em;
 }
 
 // Counter
 .clock__counter {
-  width: 200px;
-  height: 200px;
+  font-family: 'Roboto','Exo', sans-serif;
+  width: $clockSize;
+  height: $clockSize;
   margin: 40px auto;
   position: relative;
   border-radius: 50%;
-  border: 4px solid $vue-color;
-  background-color: $vue-color;
+  border: $borderSize solid $workColor;
+  background-color: $workColor;
   overflow: hidden;
   .clock__counter--border {
     position: absolute;
-    width: 192px;
-    height: 192px;
-    background-color: #303030;
+    width: $clockSize - $borderSize * 2;
+    height: $clockSize - $borderSize * 2;
+    background-color: white;
     clip-path: circle(50% at 50% 50%);
   }
 
   .clock__counter--funnel {
     position: absolute;
-    width: 192px;
-    height: 192px;
-    top: 192px;
-  }
-
-  .clock__counter--count {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    font-size: 50px;
-    font-weight: 600;
+    width: $clockSize - $borderSize * 2;
+    height: $clockSize - $borderSize * 2;
+    top:$clockSize - $borderSize * 2;
   }
 
   @mixin funnel-animation($name, $color) {
@@ -264,11 +180,11 @@ $airbnb-color: #fd5c63;
   }
 
   .work-funnel-animation {
-    @include funnel-animation(work-animation, $vue-color);
+    @include funnel-animation(work-animation, $workColor);
   }
 
   .break-funnel-animation {
-    @include funnel-animation(break-animation, $airbnb-color);
+    @include funnel-animation(break-animation, $breakColor);
   }
 
   @keyframes work-animation {
@@ -290,25 +206,27 @@ $airbnb-color: #fd5c63;
   }
 }
 
-// Reset
-.clock__reset-btn {
-  margin: 20px auto;
-  border: 2px solid;
-  width: 60px;
-  clear: both;
-  border-radius: 10px;
-  font-weight: 500;
-  border-color: $vue-color;
-  color: $vue-color;
-  text-align: center;
+.break {
+  border-color:$breakColor;
+  background-color:$breakColor;
 }
 
-.clock__reset-btn:hover {
-  background-color: $vue-color;
-  color: white;
-}
-
-.clock__reset-btn:active {
-  @include click-animation();
+@media screen and (min-width: 320px) {
+  $clockSize: 240px;
+  $borderSize:8px;
+  .clock__counter {
+    width: $clockSize;
+    height: $clockSize;
+    font-size:0.8em;
+    .clock__counter--border {
+      width: $clockSize - $borderSize * 2;
+      height: $clockSize - $borderSize * 2;
+    }
+    .clock__counter--funnel {
+      width: $clockSize - $borderSize * 2;
+      height: $clockSize - $borderSize * 2;
+      top:$clockSize - $borderSize * 2;
+    }
+  }
 }
 </style>

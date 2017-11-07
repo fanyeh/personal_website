@@ -1,12 +1,11 @@
-<template>
-  <div class='slide'>
-    <slot></slot>
-  </div>
+<template lang="pug">
+  .slide
+    slot
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'slide',
   data() {
     return {}
   }
@@ -16,7 +15,8 @@ export default {
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
 .slide {
-  position: absolute; //background-color: red;
-  opacity: 0;
+  position: absolute;
+  opacity: 1;
+  border:4px solid white;
 }
 </style>

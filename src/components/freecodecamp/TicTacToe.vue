@@ -1,56 +1,30 @@
-<template>
-  <div class="tic-tac-toe">
-    <div class="board" v-if="symbolSelected">
-  
-      <table>
-        <tbody>
-          <tr>
-            <td colspan="3">
-              <p class="board__message" :class="boardMessageBg">{{currentPlayer}}</p>
-            </td>
-          </tr>
-          <tr>
-            <td :class="cells[1] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id="1" @click="insertSymbol(1)">{{cells[1]}}</td>
-            <td :class="cells[2] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id='2' @click="insertSymbol(2)">{{cells[2]}}</td>
-            <td :class="cells[3] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id='3' @click="insertSymbol(3)">{{cells[3]}}</td>
-          </tr>
-  
-          <tr>
-            <td :class="cells[4] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id='4' @click="insertSymbol(4)">{{cells[4]}}</td>
-            <td :class="cells[5] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id='5' @click="insertSymbol(5)">{{cells[5]}}</td>
-            <td :class="cells[6] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id='6' @click="insertSymbol(6)">{{cells[6]}}</td>
-          </tr>
-  
-          <tr>
-            <td :class="cells[7] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id='7' @click="insertSymbol(7)">{{cells[7]}}</td>
-            <td :class="cells[8] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id='8' @click="insertSymbol(8)">{{cells[8]}}</td>
-            <td :class="cells[9] === 'O' ? 'board__cells--green':'board__cells--red'" class="board__cells" id='9' @click="insertSymbol(9)">{{cells[9]}}</td>
-          </tr>
-  
-          <tr>
-            <td colspan="3" class="board__reset-btn" @click="restartGame">Restart</td>
-          </tr>
-        </tbody>
-      </table>
-  
-    </div>
-  
-    <div v-if="!symbolSelected" class="board__symbol-sel">
-      <div class="_modal" v-if="gameOver">
-        <div class="jumbotron _modal__content">
-          <div class="row">
-            <div class="board__symbol board__symbol--circle board__cells--green" @click="startGame('O')">O</div>
-            <div class="board__symbol board__symbol--cross board__cells--red" @click="startGame('X')">X</div>
-          </div>
-          <p class="board__symbol-message">Please select '
-            <span class="board__cells--green">O</span>' or '
-            <span class="board__cells--red">X</span>'</p>
-        </div>
-      </div>
-  
-    </div>
-  
-  </div>
+<template lang="pug">
+  #tic-tac-toe(class="absolute abs-center bg-white")
+    //- Game Board
+    div(v-if="symbolSelected")
+      table(class="center collapse")
+          tr(class="h3-ns h2")
+            td(colspan="3" class="f2-ns f3 white fw9" :class="boardMessageBg") {{currentPlayer}}
+          tr(class="h4-ns h4 bb bw2 b--light-gray")
+            td(:class="cells[1] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 br bw2  b--light-gray f-subheadline-ns f1" id="1" @click="insertSymbol(1)") {{cells[1]}}
+            td(:class="cells[2] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 br bw2 b--light-gray f-subheadline-ns f1" id='2' @click="insertSymbol(2)") {{cells[2]}}
+            td(:class="cells[3] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 f-subheadline-ns f1" id='3' @click="insertSymbol(3)") {{cells[3]}}
+          tr(class="h4-ns h4 bb bw2 b--light-gray")
+            td(:class="cells[4] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 br bw2 b--light-gray f-subheadline-ns f1" id='4' @click="insertSymbol(4)") {{cells[4]}}
+            td(:class="cells[5] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 br bw2 b--light-gray f-subheadline-ns f1" id='5' @click="insertSymbol(5)") {{cells[5]}}
+            td(:class="cells[6] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 f-subheadline-ns f1" id='6' @click="insertSymbol(6)") {{cells[6]}}
+          tr(class="h4-ns h4")
+            td(:class="cells[7] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 br bw2 b--light-gray f-subheadline-ns f1" id='7' @click="insertSymbol(7)") {{cells[7]}}
+            td(:class="cells[8] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 br bw2 b--light-gray f-subheadline-ns f1" id='8' @click="insertSymbol(8)") {{cells[8]}}
+            td(:class="cells[9] === 'O' ? 'board__cells--green':'board__cells--red'" class="w3 f-subheadline-ns f1" id='9' @click="insertSymbol(9)") {{cells[9]}}
+          tr(class="h2-ns h2")
+            td(colspan="3" class="reset-btn f4 fw1 bg-light-gray black-60 pointer" @click="restartGame") Restart
+    //- Selection Modal
+    div( v-if="gameOver && !symbolSelected" class="modal__content absolute abs-center bg-white")
+      p(class="f2 black-40") Please select
+      div(class="board__cells--green f-headline-ns f1 dib mr4 pointer symbol" @click="startGame('O')") O
+      span(class="f3 black-40") OR
+      div(class="board__cells--red f-headline-ns f1 dib ml4 pointer symbol" @click="startGame('X')") X
 </template>
 
 <script>
@@ -225,42 +199,9 @@ export default {
 $vue-color: #42b883;
 $airbnb-color: #fd5c63;
 $border-color:#303030;
-@mixin font-setting($size, $weight) {
-  font-size: $size;
-  font-weight: $weight;
-}
 
-.tic-tac-toe {
-  margin: 0 auto;
-  display: table;
-  text-align: center;
-}
-
-table>tbody>tr {
-  border: 1px solid;
-}
-
-.board {
-  position: absolute;
-  top: 50%;
-  left: 50;
-  transform: translate(-50%, -50%);
-  display: table;
-}
-
-.board__message {
-  @include font-setting(15px, 500);
-}
-
-.board__message,
-.board-reset,
-.board__symbol {
-  margin: auto;
-}
-
-.board__symbol-sel,
-.board__reset-btn {
-  width: 100%;
+table {
+  width:320px;
 }
 
 .board__cells--green {
@@ -279,69 +220,18 @@ table>tbody>tr {
   background-color: $airbnb-color;
 }
 
-.board__cells {
-  @include font-setting(45px, 900);
-  display: table-cell;
-  width: 80px;
-  height: 80px;
-  vertical-align: middle;
-  border: 1px solid $border-color;
-  border-bottom: none;
-  border-top: none;
-}
-
-// Restart
-.board__reset-btn {
-  @include font-setting(16px, 500);
-  border: 1.5px solid $border-color;
-}
-
-.board__reset-btn:hover {
+.reset-btn:hover {
   background-color: #303030;
   color: white;
 }
 
-// Symbol selection
-.board__symbol-message {
-  @include font-setting(16px, 500);
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+.symbol:hover {
+  transform:scale(2);
+  font-weight:900;
 }
 
-.board__symbol {
-  @include font-setting(50px, 900);
-  padding: 0 15px;
-  position: absolute;
-}
-
-.board__symbol:hover {
-  border: 2px solid;
-}
-
-.board__symbol--circle {
-  left: 60px;
-}
-
-.board__symbol--cross {
-  right: 60px;
-}
-
-// Selection modal
-._modal {
-  width: 100%;
-  height: 100%;
-  background: white;
-}
-
-._modal__content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+.modal__content {
   width: 300px;
   height: 250px;
-  transform: translate(-50%, -50%);
 }
 </style>

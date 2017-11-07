@@ -3,30 +3,30 @@
     .scrollbar-measure("ref"="scrollBar")
     div(class="mb4")
       //- Search field
-      div(class="ph1 fr ba bw1 br2 dib bdc")
+      div(class="ph1 pv1 fr ba bw1 br2 dib bdc")
         i(class="fa fa-search fdc" aria-hidden="true")
         input.search-field(v-model="filter.text" type="text" "@keyup"="findMatches" placeholder="Search")
         
       //- Columns selector
       div(class="relative")
-        span.column("@click.stop"="toggleColumns" :class="{'column__toggle': showColumns}") Columns
+        span("@click.stop"="toggleColumns" :class="{'column__toggle': showColumns}" class="column ph2 pv1") Columns
           i(v-if="showColumns" class="fa fa-caret-up ml2" aria-hidden="true")
           i(v-else class="fa fa-caret-down ml2" aria-hidden="true")
-        div.column-items(:class="{'column-items__show': showColumns}" "@click.stop"="")
-          div(v-for="(header , index) in rawHeader")
+        div.column-items(:class="{'column-items__show': showColumns}" "@click.stop"="" class="pa2")
+          div(v-for="(header , index) in rawHeader" class="pv2")
             input.column-checkbox(type="checkbox" v-model="visibleCols[header]" :id="'c_' + index" )
-            label(:for="'c_' + index",class="ml2 white f6") {{header}}
+            label(:for="'c_' + index",class="white f6") {{header}}
 
     //- Table
-    .datatable(":style"="style.container" class="w-100 relative top-1 overflow-x-auto")
-      table
+    .datatable(":style"="style.container" class="w-100 relative top-1 overflow-x-auto ")
+      table(class="collapse f5 w-100")
         thead
           tr
-            th(v-for="(header, headerIndex) in tableHeader" "@click.stop"="sortTable(header)" class="pl3 pr1 bc pointer") {{header}} &nbsp
+            th(v-for="(header, headerIndex) in tableHeader" "@click.stop"="sortTable(header)" class="tl pl3 pr2 bc pointer lh-copy f5 near-black") {{header}} &nbsp
               i(class="fa fa-sort fr lh-copy" aria-hidden="true" )
         tbody
           tr.stripe(v-for="(data,index) in tableData" ":id"="index")
-            td(v-for="(header, headerIndex) in tableHeader" ":style"="style.cell" class="pl3 pr1 nowrap") 
+            td(v-for="(header, headerIndex) in tableHeader" ":style"="style.cell" class="pl3 pr1 nowrap mid-gray") 
               span.symbol(v-if="header === 'Symbol'" @click="showStockChart(data[header])") {{data[header]}}
               span(v-else) {{data[header]}}
 
@@ -34,16 +34,16 @@
     div(class="fr mt4")
       transition(name="fade")
         button(v-if="showPreviousPage" @click="changePage(-1)" class="bg-white mh1 ba")
-          i(class="fa fa-chevron-left f6 black-30" aria-hidden="true")
+          i(class="fa fa-chevron-left f7 black-30" aria-hidden="true")
       button(
         v-for="page in visiblePages" 
         :key="page" 
         "@click"="fetchPageData(page)" 
-        :class="[{'highlight' : hoverPage(page)},{'bn':isSpreader(page)}, 'bg-white', 'mh1' ,'ba','f6']" 
+        :class="[{'highlight' : hoverPage(page)},{'bn':isSpreader(page)}, 'bg-white', 'mh1' ,'ba','f6' ,'black-67']" 
         :disabled="isSpreader(page)") {{page}}
       transition(name="fade")
-        button(v-if="showNextPage" @click="changePage(1)" class="bg-white mh1 ba")
-          i(class="fa fa-chevron-right f6 black-30" aria-hidden="true")
+        button(v-if="showNextPage" @click="changePage(1)" class="bg-white ba mh1")
+          i(class="fa fa-chevron-right f7 black-30" aria-hidden="true")
 
     <stockChart v-if="$store.state.showStockChart" :symbol="symbolForChart"></stockChart>
 </template>
@@ -164,6 +164,7 @@ export default {
       /* Filter */
       this.tableData = this.rawData.filter(data => !Object.values(data).every(value => !this.filter.rule.test(value)))
 
+      // Update Pages
       this.calcTotalPages(this.tableData.length)
       this.calcVisiblePages()
       this.updateStyle()
@@ -188,8 +189,7 @@ export default {
       this.processData()
     },
     calcScrollbarWidth() {
-      this.scrollbarWidth =
-        this.$refs.scrollBar.offsetWidth - this.$refs.scrollBar.clientWidth
+      this.scrollbarWidth = this.$refs.scrollBar.offsetWidth - this.$refs.scrollBar.clientWidth
       this.$refs.scrollBar.remove()
     },
     calcHeight(offset = 0) {
@@ -296,6 +296,7 @@ button {
 
 /* Pagination Button */
 button {
+  font-family:"Roboto";
   &:hover:not(.highlight) {
     border-color: $mainColor;
     color: $mainColor;
@@ -331,7 +332,7 @@ button {
 .column {
   float: left;
   border: 2px solid $mainColor;
-  padding: 0px 5px 0px 5px;
+  // padding: 0px 5px 0px 5px;
   border-radius: 5px;
   transition: all 0.1s;
   color: grey;
@@ -349,9 +350,8 @@ button {
   position: absolute;
   display: inline-block;
   background: $mainColor;
-  padding: 5px 10px 0px 0px;
   border-radius: 5px;
-  left: 0;
+  left: 30px;
   top: 38px;
   z-index: 999;
   box-shadow: 8px 8px 34px -4px rgba(0, 0, 0, 0.75);
@@ -411,7 +411,7 @@ button {
   content: "\f00c";
   position: absolute;
   top: 0.4em;
-  left: 0.15em;
+  left: 0.2em;
   line-height: 0.8;
   color: $mainColor;
   transition: all 0.2s;
@@ -436,5 +436,11 @@ button {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+table {
+  font-family: 'Roboto';
+  //   -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 </style>

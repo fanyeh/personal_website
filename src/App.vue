@@ -1,10 +1,10 @@
 <template>
-  <div id="app" class="container-fluid">
+  <div id="app">
     <router-view></router-view>
     <router-view name="freecodecamp"></router-view>
     <vue-item></vue-item>
     <cssItem></cssItem>
-    <Footer></Footer>
+    <Social></Social>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import About from 'components/About'
 import FreeCodeCamp from 'components/FreeCodeCamp'
 import cssItem from 'components/CSSItem'
 import vueItem from 'components/VueItem'
-import Footer from 'components/Footer'
+import Social from 'components/Social'
 export default {
   name: 'app',
   components: {
@@ -21,7 +21,14 @@ export default {
     FreeCodeCamp,
     cssItem,
     vueItem,
-    Footer
+    Social
   }
 }
 </script>
+<style>
+#app  {
+  font-family: 'Exo', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>

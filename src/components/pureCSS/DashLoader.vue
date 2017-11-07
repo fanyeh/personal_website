@@ -1,13 +1,11 @@
-<template>
-  <div class="mt4">
-    <div class="container">
-      <div v-for="i in 4" class="bar"></div>
-    </div>
-    <h6 class="credit">Inspired from
-      <a href="https://dribbble.com/colder" target="_blank">Vitaly Silkin</a>'s
-      <a href="https://dribbble.com/shots/3678774-Dash-loader" target="_blank"> Dash Loader</a>
-    </h6>
-  </div>
+<template lang="pug">
+  div
+    div(class="container h-center")
+      div(v-for="i in 4" class="bar")
+    div(class="tc mt5 credit f5-ns f6") Inspired by
+      a(href="https://dribbble.com/colder" target="_blank" class="ml2") Vitaly Silkin 
+      span(class="mr2 silver") 's
+      a(href="https://dribbble.com/shots/3678774-Dash-loader" target="_blank") Dash Loader 
 </template>
 
 <script>
@@ -31,12 +29,6 @@ $gap:25px;
   text-align: center;
   margin-top: -25px;
   margin-bottom: 30px;
-  font-size: 14px;
-}
-
-.credit {
-  text-align: center;
-  margin-top: 50px;
   font-size: 14px;
 }
 

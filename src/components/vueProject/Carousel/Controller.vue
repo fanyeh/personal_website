@@ -1,11 +1,9 @@
-<template>
-  <div>
-    <div class='container' ref='container'>
-      <i class="fa fa-3x fa-angle-left" aria-hidden="true" @click='slideLeft'></i>
-      <i class="fa fa-3x fa-angle-right" aria-hidden="true" @click='slideRight'></i>
-      <slot></slot>
-    </div>
-  </div>
+<template lang="pug">
+  //- #controller(class="")
+  #controller(class='' ref='container')
+    i(class="fa fa-3x fa-angle-left v-center" aria-hidden="true" @click='slideLeft')
+    i(class="fa fa-3x fa-angle-right v-center" aria-hidden="true" @click='slideRight')
+    slot
 </template>
 
 <script>
@@ -89,7 +87,7 @@ export default {
       this.transitionCount = 0
     },
     createOffset() {
-      this.$refs.container.style.height = `${this.slideSize}px`
+      // this.$refs.container.style.height = `${this.slideSize}px`
       this.xOffset = (this.$refs.container.clientWidth - (this.slideCount * this.slideSize)) / 2
     },
     createMultipliers() {
@@ -187,11 +185,12 @@ export default {
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
 $perspective:800px;
-.container {
+#controller {
   transform-style: preserve-3d;
   perspective: $perspective;
   position: absolute;
   width: 100%;
+  height:100%;
   overflow: hidden;
   top: 50%;
   left: 50%;
@@ -202,8 +201,6 @@ $perspective:800px;
   background-color: white;
   color: #222831;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 48px;
   border-radius: 50%;
   opacity: 0.7;
@@ -211,10 +208,10 @@ $perspective:800px;
 }
 
 .fa-angle-left {
-  left: 60px;
+  left: 4em;
 }
 
 .fa-angle-right {
-  right: 60px;
+  right: 4em;
 }
 </style>

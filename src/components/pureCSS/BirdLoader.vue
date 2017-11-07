@@ -1,18 +1,16 @@
-<template>
-  <div class="mt4">
-    <div class='container'>
-      <div class='loader tongue'></div>
-      <div class='loader hair'></div>
-      <div class='loader head'></div>
-      <div class='loader chin'></div>
-      <div class='loader eye'></div>
-      <div class='loader mouth'></div>
-    </div>
-    <h6 class="credit">Inspired from
-      <a href="https://dribbble.com/royveldkamp" target="_blank">Roy Veldkamp</a>'s
-      <a href="https://dribbble.com/shots/2030551-Bird-Loader" target="_blank"> Bird Loader</a>
-    </h6>
-  </div>
+<template lang="pug">
+  div
+    div(class='container h-center')
+      .tongue.absolute
+      .hair.absolute
+      .head.absolute
+      .chin.absolute
+      .eye.absolute
+      .mouth.absolute
+    div(class="tc mt5 credit f5-ns f6") Inspired by
+      a(href="https://dribbble.com/royveldkamp" target="_blank" class="ml2") Roy Veldkamp 
+      span(class="mr2 silver") 's
+      a(href="https://dribbble.com/shots/2030551-Bird-Loader" target="_blank" ) Bird Loader 
 </template>
 
 <script>
@@ -43,21 +41,11 @@ export default {
 
 $duration: 3s;
 
-.credit {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 14px;
-}
-
 .container {
   position: relative;
   width: 200px;
   height: 200px;
   background-color: rgb(250, 250, 250);
-}
-
-.loader {
-  position: absolute;
 }
 
 .hair {

@@ -1,28 +1,20 @@
-<template>
-  <div class="game">
-    <h1>GameOfLife</h1>
-    <!-- Game board -->
-    <table>
-      <tr v-for="(cell, x) in cells">
-        <td @click="becomeAlive(x,y,1)" class="game__cell" :class="cellColor(cell[y])" v-for="(col ,y) in cell"></td>
-      </tr>
-    </table>
-    <div class="game__generation">
-      <h5>Generations : {{generations}}</h5>
-    </div>
-    <!--Control buttons-->
-    <div class="row">
-      <div class="col-md-12">
-        <button class="btn" @click="startGame">Start</button>
-        <button class="btn" @click="stopGame">Stop</button>
-        <button class="btn" @click="clearBoard">Clear</button>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  #game(class="abs-center w-80 absolute")
+    //- Title
+    span(class="f2") GameOfLife
+    //- Game Board
+    table(class="center mt3")
+      tr(v-for="(cell, x) in cells")
+        td(@click="becomeAlive(x,y,1)" class="game__cell" :class="cellColor(cell[y])" v-for="(col ,y) in cell")
+    div(class="tc mt3 f4-ns f5") Generations : {{generations}}
+    //- Control Buttons
+    div(class="mt4-ns mt3")
+      button(class="br3 bg-white b--black f6 f5-ns mh2" @click="startGame") Start
+      button(class="br3 bg-white b--black f6 f5-ns mh2" @click="stopGame") Stop
+      button(class="br3 bg-white b--black f6 f5-ns mh2" @click="clearBoard") Clear
 </template>
 
 <script>
-
 export default {
   name: 'app',
   data() {
@@ -144,16 +136,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.game {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
 table {
-  margin: 0 auto;
   border-spacing: 1px;
   border-collapse: separate;
 }
@@ -161,7 +144,7 @@ table {
 .game__cell {
   width: 16px;
   height: 16px;
-  background-color: #303030;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .game__cell--newborn {
@@ -172,17 +155,7 @@ table {
   background-color: #42b883;
 }
 
-.game__generation {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.btn {
-  background-color: white;
-  border: 2px solid;
-}
-
-.btn:hover {
+button:hover {
   background-color: #303030;
   color: white;
 }

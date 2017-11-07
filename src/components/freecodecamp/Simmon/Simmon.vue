@@ -1,20 +1,16 @@
-<template>
-  <div class="simmon">
-    <div class='game'>
-      <color-block v-for="block in blocks" :position="block" :key="block"></color-block>
-      <div class="v-line"></div>
-      <div class="h-line"></div>
-      <div class="control-block">
-        <controller></controller>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  #simmon(class="h-100")
+    .game
+      color-block(v-for="block in blocks" :position="block" :key="block")
+      .v-line
+      .h-line
+      .control-block
+        controller
 </template>
 
 <script>
 import Controller from './Controller'
 import ColorBlock from './ColorBlock'
-
 export default {
   name: 'app',
   data() {
@@ -37,12 +33,8 @@ export default {
   $blockSize: 350px;
 }
 
-.simmon {
-  height: 100%;
-}
-
 .game {
-  @include componentSize(relative, $gamePad, $gamePad); // margin: auto;
+  @include componentSize(relative, $gamePad, $gamePad); 
   border-radius: 50%;
   background-color: $borderColor;
   position: absolute;

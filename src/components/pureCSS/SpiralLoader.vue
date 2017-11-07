@@ -1,13 +1,11 @@
-<template>
-  <div class="mt4">
-    <div class="container">
-      <div v-for="i in 20" class="circle"></div>
-    </div>
-    <h6 class="credit">Inspired from
-      <a href="https://dribbble.com/drewendly" target="_blank">Drew Endly</a>'s
-      <a href="https://dribbble.com/shots/3156979-Double-Helix-Loader-pure-scss" target="_blank"> Double Helix Loader</a>
-    </h6>
-  </div>
+<template lang="pug">
+  div
+    div(class="container h-center")
+      div(v-for="i in 20" class="circle")
+    div(class="tc mt5 credit f5-ns f6") Inspired by
+      a(href="https://dribbble.com/drewendly" target="_blank" class="ml2") Drew Endly 
+      span(class="mr2 silver") 's
+      a(href="https://dribbble.com/shots/3156979-Double-Helix-Loader-pure-scss" target="_blank") Double Helix Loader
 </template>
 
 <script>
@@ -36,22 +34,12 @@ $duration:3.5;
   font-size: 14px;
 }
 
-.credit {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 14px;
-}
-
-
 .container {
   text-align: center;
   position: relative;
   height: 120px;
-  width: ($dotCount/2 + 2) * $gap + px; // margin: auto;
-  margin-top: 30px; // top: 0;
-  background: rgb(250, 250, 250); // left: 0;
-  // bottom: 0;
-  // right: 0;
+  width: ($dotCount/2 + 2) * $gap + px;
+  background: rgb(250, 250, 250);
 }
 
 .circle {
