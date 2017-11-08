@@ -1,6 +1,6 @@
 <template lang="pug">
   #freecodecamp(class="w-80 center" ref='fcc')
-    hr
+    hr(class="light-silver bt")
     a(class="top--2-ns top-c h-center f2-ns f3 bg-white relative ph5-ns ph4 dib link mb5 black" href="https://www.freecodecamp.com" target="_blank") FreeCodeCamp
       
     .masonry

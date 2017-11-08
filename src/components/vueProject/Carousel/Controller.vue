@@ -1,5 +1,4 @@
 <template lang="pug">
-  //- #controller(class="")
   #controller(class='' ref='container')
     i(class="fa fa-3x fa-angle-left v-center" aria-hidden="true" @click='slideLeft')
     i(class="fa fa-3x fa-angle-right v-center" aria-hidden="true" @click='slideRight')

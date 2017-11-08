@@ -7,10 +7,10 @@
         i(class="fa fa-search fdc" aria-hidden="true")
         input.search-field(v-model="filter.text" type="text" "@keyup"="findMatches" placeholder="Search")
         
-      //- Columns selector
+      //- Column selector
       div(class="relative")
         span("@click.stop"="toggleColumns" :class="{'column__toggle': showColumns}" class="column ph2 pv1") Columns
-          i(v-if="showColumns" class="fa fa-caret-up ml2" aria-hidden="true")
+          i(v-if="showColumns" class="fa fa-caret-up ml2 f4" aria-hidden="true")
           i(v-else class="fa fa-caret-down ml2" aria-hidden="true")
         div.column-items(:class="{'column-items__show': showColumns}" "@click.stop"="" class="pa2")
           div(v-for="(header , index) in rawHeader" class="pv2")
@@ -22,16 +22,15 @@
       table(class="collapse f5 w-100")
         thead
           tr
-            th(v-for="(header, headerIndex) in tableHeader" "@click.stop"="sortTable(header)" class="tl pl3 pr2 bc pointer lh-copy f5 near-black") {{header}} &nbsp
+            th(v-for="(header, headerIndex) in tableHeader" :key="headerIndex" "@click.stop"="sortTable(header)" class="tl pl3 pr2 bc pointer lh-copy f5 near-black") {{header}} &nbsp
               i(class="fa fa-sort fr lh-copy" aria-hidden="true" )
         tbody
-          tr.stripe(v-for="(data,index) in tableData" ":id"="index")
-            td(v-for="(header, headerIndex) in tableHeader" ":style"="style.cell" class="pl3 pr1 nowrap mid-gray") 
+          tr.stripe(v-for="(data,index) in tableData" :key="index" ":id"="index")
+            td(v-for="(header, headerIndex) in tableHeader" :key="headerIndex" ":style"="style.cell" class="pl3 pr1 nowrap mid-gray") 
               span.symbol(v-if="header === 'Symbol'" @click="showStockChart(data[header])") {{data[header]}}
               span(v-else) {{data[header]}}
-
     //- Pagination
-    div(class="fr mt4")
+    div(class="fr page-btns")
       transition(name="fade")
         button(v-if="showPreviousPage" @click="changePage(-1)" class="bg-white mh1 ba")
           i(class="fa fa-chevron-left f7 black-30" aria-hidden="true")
@@ -50,7 +49,7 @@
 
 <script>
 
-import stockChart from 'vueProject/stockChart'
+import stockChart from 'vueProject/Datatable/stockChart'
 import json from 'json/nasdaq.json'
 
 export default {
@@ -352,7 +351,7 @@ button {
   background: $mainColor;
   border-radius: 5px;
   left: 30px;
-  top: 38px;
+  top: 41px;
   z-index: 999;
   box-shadow: 8px 8px 34px -4px rgba(0, 0, 0, 0.75);
   transition: all 0.2s;
@@ -440,7 +439,9 @@ button {
 
 table {
   font-family: 'Roboto';
-  //   -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+}
+
+.page-btns {
+  margin-top:20px;
 }
 </style>

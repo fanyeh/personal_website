@@ -9,10 +9,6 @@
 </template>
 
 <script>
-
-/* If required */
-/* import otherComponent from './components/OtherComponent' */
-
 export default {
   name: 'spiralLoader',
   data() {
@@ -21,7 +17,7 @@ export default {
 }
 </script>
 
-<!-- Add 'scoped' attribute to limit CSS to this component only -->
+
 <style scoped lang='scss'>
 $size: 20px;
 $gap: 40;

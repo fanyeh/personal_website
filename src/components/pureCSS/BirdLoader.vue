@@ -14,10 +14,6 @@
 </template>
 
 <script>
-
-/* If required */
-/* import otherComponent from './components/OtherComponent' */
-
 export default {
   name: 'birdLoader',
   data() {
@@ -26,8 +22,8 @@ export default {
 }
 </script>
 
-<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
+$duration: 3s;
 @mixin bgColorAndSize($color, $width, $height) {
   background-color: $color;
   width: $width;
@@ -38,8 +34,6 @@ export default {
   top: $top;
   left: $left;
 }
-
-$duration: 3s;
 
 .container {
   position: relative;

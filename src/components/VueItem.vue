@@ -1,6 +1,6 @@
 <template lang="pug">
   div(class="mt6-ns mt5 w-80 center")
-    hr
+    hr(class="light-silver bt")
     div(class="top--2-ns top-c h-center f2-ns f3 bg-white relative ph5-ns ph4 dib") Vue.js
 
     div
@@ -12,21 +12,22 @@
     datatable
 
     div
-      div(class="h-center mt6-ns mb4 mt5 dib relative black-80 f4-ns f5") [ Pieces ]
-    piece
+      div(class="h-center mt6-ns mb3 mt5 dib relative black-80 f4-ns f5 tc") [ Pieces ]
+        p(class="tc f5 mid-gray mb0") click image to see the effect
+    pieces
 
   </div>
 </template>
 
 <script>
 import Carousel from 'vueProject/Carousel/Carousel'
-import Piece from 'vueProject/PieceImg'
-import Datatable from 'vueProject/Datatable'
+import Pieces from 'vueProject/Pieces/Pieces'
+import Datatable from 'vueProject/Datatable/Datatable'
 export default {
   name: 'vueItem',
   components: {
     Carousel,
-    Piece,
+    Pieces,
     Datatable
   }
 }

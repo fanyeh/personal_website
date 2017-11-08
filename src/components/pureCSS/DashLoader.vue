@@ -9,7 +9,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'dashLoader',
   data() {
@@ -18,7 +17,6 @@ export default {
 }
 </script>
 
-<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang='scss'>
 $delay:3.5s;
 $width:50px;
