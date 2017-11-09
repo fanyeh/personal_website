@@ -1,9 +1,11 @@
 <template lang="pug">
   #carousel(class="tc relative container")
-    div(class='loader' ref="loader")
+    //- div(class='loader' ref="loader")
     controller(v-on:loopLeft='loopLeft' v-on:loopRight='loopRight' v-if="visible")
       slide(v-for="(key , index) in visibleImageIndex" :key='index')
-        img(class='v-center relative' :src='imgSource[key]')
+        //- img(class='v-center relative' :src='imgSource[key]' :data-src='key')
+        img(class='v-center relative slide-image' :data-src='key')
+
 </template>
 
 <script>
@@ -93,11 +95,10 @@ export default {
       return current === limit ? origin : next
     },
     imageLoaded() {
-      this.visibleImages = this.$el.querySelectorAll('.carousel-img')
-      this.visibleImages.forEach((e) => {
-        e.onload = () => {
-          this.loadedImg += 1
-        }
+      let images = this.$el.querySelectorAll('.slide-image')
+      images.forEach((e) => {
+        let key = e.getAttribute('data-src')
+        e.setAttribute('src', this.imgSource[key])
       })
     }
   },
@@ -107,7 +108,7 @@ export default {
         this.loadvisibleImageIndex()
       })
       .then(() => {
-        this.imageLoaded()
+        window.addEventListener('load', this.imageLoaded)
       })
   }
 }
