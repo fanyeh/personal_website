@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import About from 'components/About'
-import FreeCodeCamp from 'components/FreeCodeCamp'
-import FreeCodeCampItem from 'components/FreeCodeCampItem'
+import AboutMe from 'components/AboutMe'
+import FCCProject from 'components/FCCProject'
+import FCCProjectSlider from 'components/fcc_project/FCCProjectSlider'
 
 Vue.use(Router)
 
@@ -12,14 +12,14 @@ export default new Router({
     path: '/',
     name: 'home',
     components: {
-      default: About,
-      freecodecamp: FreeCodeCamp
+      default: AboutMe,
+      freecodecamp: FCCProject
     }
   },
   {
-    path: '/freecodecamp/:projectName',
+    path: '/fcc_project/:projectName',
     name: 'freecodecamp',
-    component: FreeCodeCampItem,
+    component: FCCProjectSlider,
     props: true
   }]
 })

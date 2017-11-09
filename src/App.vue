@@ -2,26 +2,24 @@
   #app(class="overflow-auto")
     router-view
     router-view(name="freecodecamp")
-    vue-item
-    cssItem
-    Social
+    VueProject
+    CSSProject
+    SocialFooter
     i(class="fa fa-arrow-circle-up fixed right-2 bottom-1 silver f1 pointer grow" aria-hidden="true" @click="scrollTop")
 </template>
 
 <script>
-import About from 'components/About'
-import FreeCodeCamp from 'components/FreeCodeCamp'
-import cssItem from 'components/CSSItem'
-import vueItem from 'components/VueItem'
-import Social from 'components/Social'
+import AboutMe from 'components/AboutMe'
+import CSSProject from 'components/CSSProject'
+import VueProject from 'components/VueProject'
+import SocialFooter from 'components/SocialFooter'
 export default {
   name: 'app',
   components: {
-    About,
-    FreeCodeCamp,
-    cssItem,
-    vueItem,
-    Social
+    AboutMe,
+    CSSProject,
+    VueProject,
+    SocialFooter
   },
   data () {
     return {

@@ -24,9 +24,9 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'components': resolve('src/components'),
-      'freecodecamp': resolve('src/components/freecodecamp'),
-      'pureCSS': resolve('src/components/pureCSS'),
-      'vueProject': resolve('src/components/vueProject'),
+      'fcc_porject': resolve('src/components/fcc_project'),
+      'css_project': resolve('src/components/css_project'),
+      'vue_project': resolve('src/components/vue_project'),
       'images': resolve('src/assets/images'),
       'json': resolve('src/assets/json')
     }
