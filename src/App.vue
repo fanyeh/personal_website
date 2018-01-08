@@ -1,45 +1,48 @@
 <template lang="pug">
-  #app(class="overflow-auto")
-    router-view
-    router-view(name="freecodecamp")
-    VueProject
-    CSSProject
-    SocialFooter
+  #app(class="overflow-auto" v-cloak)
+    keep-alive
+      router-view
+    keep-alive  
+      router-view(name="fcc")
+    keep-alive
+      router-view(name="vue")
+    keep-alive
+      router-view(name="css")
+    keep-alive
+      router-view(name="social")
     i(class="fa fa-arrow-circle-up fixed right-2 bottom-1 silver f1 pointer grow" aria-hidden="true" @click="scrollTop")
 </template>
 
 <script>
-import AboutMe from 'components/AboutMe'
-import CSSProject from 'components/CSSProject'
-import VueProject from 'components/VueProject'
-import SocialFooter from 'components/SocialFooter'
+
 export default {
   name: 'app',
-  components: {
-    AboutMe,
-    CSSProject,
-    VueProject,
-    SocialFooter
-  },
   data () {
     return {
-      isScrollToTop: false
+      isScrollToTop: false,
+      scrollInterval: {}
     }
   },
   methods: {
     scrollTop() {
-      if (!this.isScrollToTop) {
-        let scrollStep = -window.scrollY / (800 / 5)
-        let scrollInterval = setInterval(function() {
-          if (window.scrollY !== 0) {
-            window.scrollBy(0, scrollStep)
-          } else {
-            clearInterval(scrollInterval)
-            this.isScrollToTop = !this.isScrollToTop
-          }
-        }, 5)
-      }
+      let scrollStep = -window.scrollY / (800 / 5)
+      this.scrollInterval = setInterval(function() {
+        if (window.scrollY !== 0) {
+          window.scrollBy(0, scrollStep)
+        } else {
+          this.clearScrollInterval()
+        }
+      }, 5)
+    },
+    clearScrollInterval() {
+      clearInterval(this.scrollInterval)
     }
+  },
+  mounted() {
+    window.addEventListener('wheel', this.clearScrollInterval)
+  },
+  destroyed() {
+    window.removeEventListener('wheel', this.clearScrollInterval)
   }
 }
 </script>
@@ -49,6 +52,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+[v-cloak] {
+  display: none;
+}
+
+[v-cloak]::before { content: "loading…" }
 
 button {
   -webkit-appearance:none;

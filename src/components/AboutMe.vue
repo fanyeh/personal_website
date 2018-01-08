@@ -12,7 +12,8 @@
           label(class="mr2 black-60") somtimes I run
       //- Center
       div(class="fl w-100 w-33-l pa2 mb6-l mb3 mb4-m")
-        img(class="mt4 w-100-l w-60 w-50-m" src="~images/about_me/about-me-img.png")
+        img(class="mt4 w-100-l w-60 w-50-m" src="~images/about_me/about-me-img.png" ref="aboutMeImg")
+
       //- Cycling
       div(v-if="largeScreen" class="fl w-33-l pa2 relative")
         img(class="absolute left--1 mt5" src="~images/about_me/about-me-right.svg")
@@ -37,7 +38,7 @@ export default {
   data() {
     return {
       consoleString: ['> '],
-      defaultMsg: 'hello( world )',
+      defaultMsg: 'hello( world! )',
       errorString: ['> '],
       errorMsg: 'ReferenceError: hello is not defined !',
       oopsString: ['> '],
@@ -89,7 +90,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-#about {
+#aboutMe {
   height:783px;
 }
 

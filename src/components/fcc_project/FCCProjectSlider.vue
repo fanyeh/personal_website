@@ -55,8 +55,7 @@ export default {
       this.$router.push({ name: 'freecodecamp', params: { projectName: currentProject } })
     },
     closeSlider() {
-      this.$refs.portfolio.style.transformOrigin = 'top right'
-      this.$router.push({ name: 'home' })
+      this.$router.back()
     }
   }
 }

@@ -5,7 +5,7 @@
       div(class="br-circle dib relative social bg-mid-gray")
         a(href="https://www.linkedin.com/in/jack-yeh-50b66033/" target="_blank")
           i(class="fa fa-linkedin f3 white absolute abs-center" aria-hidden="true")
-      div(class="br-circle dib relative social bg-mid-gray mh6")
+      div(class="br-circle dib relative social bg-mid-gray mh6-ns mh4")
         a(href="https://github.com/fanyeh/" target="_blank")
           i(class="fa fa-github f3 white absolute abs-center" aria-hidden="true")
       div(class="br-circle dib relative social bg-mid-gray")

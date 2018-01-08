@@ -1,9 +1,7 @@
 <template lang="pug">
   #carousel(class="tc relative container")
-    //- div(class='loader' ref="loader")
     controller(v-on:loopLeft='loopLeft' v-on:loopRight='loopRight' v-if="visible")
       slide(v-for="(key , index) in visibleImageIndex" :key='index')
-        //- img(class='v-center relative' :src='imgSource[key]' :data-src='key')
         img(class='v-center relative slide-image' :data-src='key')
 
 </template>
@@ -22,7 +20,6 @@ export default {
       visibleImageIndex: [],
       currentLeft: 0,
       currentRight: 6,
-      visibleImages: [],
       visible: false,
       loadedImg: 0
     }
@@ -30,13 +27,6 @@ export default {
   components: {
     Controller,
     Slide
-  },
-  watch: {
-    loadedImg: function(value) {
-      if (value === this.slideCount) {
-        this.$refs.loader.classList.add('loader-fade')
-      }
-    }
   },
   methods: {
     loadImageSources() {
@@ -94,7 +84,7 @@ export default {
       let next = limit === 0 ? current - 1 : current + 1
       return current === limit ? origin : next
     },
-    imageLoaded() {
+    lazyImgLoad() {
       let images = this.$el.querySelectorAll('.slide-image')
       images.forEach((e) => {
         let key = e.getAttribute('data-src')
@@ -108,7 +98,7 @@ export default {
         this.loadvisibleImageIndex()
       })
       .then(() => {
-        window.addEventListener('load', this.imageLoaded)
+        window.addEventListener('load', this.lazyImgLoad)
       })
   }
 }
@@ -117,10 +107,5 @@ export default {
 <style scoped lang='scss'>
 .container {
   height: 550px; 
-}
-
-.loader-fade {
-  visibility: hidden;
-  opacity: 0;
 }
 </style>

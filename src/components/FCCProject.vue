@@ -26,12 +26,6 @@ export default {
     projectImagePath(project) {
       return require('../assets/images/freecodecamp/' + project + '.png')
     }
-  },
-  mounted () {
-    document.body.style.overflow = 'auto'
-  },
-  destroyed() {
-    document.body.style.overflow = 'hidden'
   }
 }
 </script>
@@ -85,6 +79,7 @@ export default {
 img {
   position:relative;
   max-height:350px;
+  z-index:1;
 }
 
 .link {

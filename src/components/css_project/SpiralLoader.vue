@@ -17,18 +17,13 @@ export default {
 }
 </script>
 
-
 <style scoped lang='scss'>
-$size: 20px;
+
+$size: 14px;
 $gap: 40;
 $jumpHeight: 100px;
-$dotCount: 20;
+$dotCount: 18;
 $duration:3.5;
-
-.title {
-  text-align: center;
-  font-size: 14px;
-}
 
 .container {
   text-align: center;
@@ -111,4 +106,5 @@ $duration:3.5;
     top: $jumpHeight;
   }
 }
+
 </style>
