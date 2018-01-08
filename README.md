@@ -1,4 +1,5 @@
-# Personal portfolio website
+# My portfolio website
 
-> This is my personal website done by using Vue.js
-> Live site : jack-ffy.surge.sh
+> This is my personal portfolio webiste done by using Vue.js.
+
+> Live site on : [http://jack-ffy.surge.sh/](http://jack-ffy.surge.sh/)
